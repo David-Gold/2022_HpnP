@@ -1,0 +1,323 @@
+IQ-TREE 1.6.12 built Jul 19 2020
+
+Partition file name: 7_Cyano_Species.partitions.txt
+Input file name: 7_Cyano_Species.FcC_supermatrix.fas
+Type of analysis: ModelFinder + tree reconstruction + ultrafast bootstrap (1000 replicates)
+Random seed number: 178828
+
+REFERENCES
+----------
+
+To cite ModelFinder please use: 
+
+Subha Kalyaanamoorthy, Bui Quang Minh, Thomas KF Wong, Arndt von Haeseler,
+and Lars S Jermiin (2017) ModelFinder: Fast model selection for
+accurate phylogenetic estimates. Nature Methods, 14:587–589.
+https://doi.org/10.1038/nmeth.4285
+
+To cite IQ-TREE please use:
+
+Lam-Tung Nguyen, Heiko A. Schmidt, Arndt von Haeseler, and Bui Quang Minh
+(2015) IQ-TREE: A fast and effective stochastic algorithm for estimating
+maximum likelihood phylogenies. Mol Biol Evol, 32:268-274.
+https://doi.org/10.1093/molbev/msu300
+
+Since you used ultrafast bootstrap (UFBoot) please also cite: 
+
+Diep Thi Hoang, Olga Chernomor, Arndt von Haeseler, Bui Quang Minh,
+and Le Sy Vinh (2017) UFBoot2: Improving the ultrafast bootstrap
+approximation. Mol Biol Evol, in press.
+https://doi.org/10.1093/molbev/msx281
+
+Since you used partition models please also cite:
+
+Olga Chernomor, Arndt von Haeseler, and Bui Quang Minh (2016)
+Terrace aware data structure for phylogenomic inference from
+supermatrices. Syst Biol, 65:997-1008.
+https://doi.org/10.1093/sysbio/syw037
+
+SEQUENCE ALIGNMENT
+------------------
+
+Input data: 47 taxa with 6 partitions and 3878 total sites (0% missing data)
+
+  ID  Name                                                         Type	Seq	Site	Unique	Infor	Invar	Const
+   1  OG0001746+OG0001755+OG0001764                                AA	47	388	301	248	106	105
+   2  OG0001747+OG0001758+OG0001765+OG0001838+OG0001855+OG0001867  AA	47	2194	1339	1092	914	914
+   3  OG0001757                                                    AA	47	356	325	283	54	54
+   4  OG0001772+OG0001781                                          AA	47	281	177	134	125	125
+   5  OG0001774+OG0001775+OG0001813+OG0001817                      AA	47	597	366	303	253	253
+   6  OG0001806                                                    AA	47	62	42	25	33	33
+
+Column meanings:
+  Unique: Number of unique site patterns
+  Infor:  Number of parsimony-informative sites
+  Invar:  Number of invariant sites
+  Const:  Number of constant sites (can be subset of invariant sites)
+
+ModelFinder
+-----------
+
+Best-fit model according to BIC: LG+I+G4:OG0001746+OG0001755+OG0001764,LG+F+R5:OG0001747+OG0001758+OG0001765+OG0001838+OG0001855+OG0001867,JTT+I+G4:OG0001757,LG+I+G4:OG0001772+OG0001781,LG+I+G4:OG0001774+OG0001775+OG0001813+OG0001817,Dayhoff+G4:OG0001806
+
+List of best-fit models per partition:
+
+  ID  Model             LogL          AIC      w-AIC      AICc     w-AICc       BIC      w-BIC
+   1  LG+I+G4         -12673.2849  25352.5698 - 0.0000  25352.6323 + 0.0000  25364.4528 + 0.0000
+   2  LG+F+R5         -53567.6975 107191.3951 - 0.0000 107192.1452 + 0.0000 107350.8126 + 0.0000
+   3  JTT+I+G4        -15370.6668  30747.3336 - 0.0000  30747.4018 + 0.0000  30758.9584 + 0.0000
+   4  LG+I+G4          -5155.1822  10316.3643 - 0.0000  10316.4510 + 0.0000  10327.2794 + 0.0000
+   5  LG+I+G4         -14174.8480  28355.6960 - 0.0000  28355.7364 + 0.0000  28368.8717 + 0.0000
+   6  Dayhoff+G4       -1200.5171   2405.0342 - 0.0000   2405.2376 + 0.0000   2409.2885 + 0.0000
+
+AIC, w-AIC   : Akaike information criterion scores and weights.
+AICc, w-AICc : Corrected AIC scores and weights.
+BIC, w-BIC   : Bayesian information criterion scores and weights.
+
+Plus signs denote the 95% confidence sets.
+Minus signs denote significant exclusion.
+
+SUBSTITUTION PROCESS
+--------------------
+
+Edge-linked-proportional partition model but separate models between partitions
+
+  ID  Model           Speed  Parameters
+   1  LG+I+G4        1.3546  LG+I{0.22145}+G4{1.04258}
+   2  LG+F+R5        0.8859  LG+R5{0.497674,0.0470181,0.158541,0.504681,0.180714,1.34702,0.113669,3.00281,0.049402,6.31222}
+   3  JTT+I+G4       2.0682  JTT+I{0.12584}+G4{1.15315}
+   4  LG+I+G4        0.5356  LG+I{0.304776}+G4{0.868058}
+   5  LG+I+G4        0.8270  LG+I{0.32987}+G4{0.849825}
+   6  Dayhoff+G4     0.4548  Dayhoff+G4{0.230239}
+
+MAXIMUM LIKELIHOOD TREE
+-----------------------
+
+Log-likelihood of the tree: -102135.2114 (s.e. 1670.2364)
+Unconstrained log-likelihood (without tree): -22633.1747
+Number of free parameters (#branches + #model parameters): 132
+Akaike information criterion (AIC) score: 204534.4228
+Corrected Akaike information criterion (AICc) score: 204543.7985
+Bayesian information criterion (BIC) score: 205361.1486
+
+Total tree length (sum of branch lengths): 6.5912
+Sum of internal branch lengths: 2.3363 (35.4456% of tree length)
+
+NOTE: Tree is UNROOTED although outgroup taxon 'Aulosira_sp' is drawn at root
+Numbers in parentheses are  ultrafast bootstrap support (%)
+
++--Aulosira_sp
+|
+|                                  +------Stenomitos_frigidus
+|                               +--| (100)
+|                               |  |        +--Leptolyngbya_boryana
+|                               |  |    +---| (100)
+|                               |  |    |   |  +--Pseudanabaenaceae_cyanobacterium
+|                               |  |    |   +--| (100)
+|                               |  |    |      +--Leptolyngbya_sp
+|                               |  +----| (100)
+|                               |       +-----Myxacorys_almedinensis
+|                            +--| (55)
+|                            |  |  +-------Leptolyngbya_hensonii
+|                            |  +--| (53)
+|                            |     +--------Neosynechococcus_sphagnicola
+|                         +--| (100)
+|                         |  |              +-----------Aphanocapsa_montana
+|                         |  |           +--| (100)
+|                         |  |           |  +----------Acaryochloris_sp
+|                         |  |        +--| (100)
+|                         |  |        |  |       +--------Synechococcus_sp
+|                         |  |        |  |  +----| (100)
+|                         |  |        |  |  |    |      +--Synechococcus_lividus
+|                         |  |        |  |  |    +------| (100)
+|                         |  |        |  |  |           +--Thermosynechococcus_elongatus
+|                         |  |        |  +--| (99)
+|                         |  |        |     +------Cyanothece_sp
+|                         |  |     +--| (93)
+|                         |  |     |  |                                 +----Gloeobacter_kilaueensis
+|                         |  |     |  |   +-----------------------------| (100)
+|                         |  |     |  |   |                             +----Gloeobacter_violaceus
+|                         |  |     |  +---| (99)
+|                         |  |     |      +---------------------Gloeomargarita_lithophora
+|                         |  |  +--| (32)
+|                         |  |  |  +----------------Prochlorothrix_hollandica
+|                         |  +--| (35)
+|                         |     +---------Desertifilum_sp-1220
+|                      +--| (99)
+|                      |  |           +-----------Gloeocapsa_sp
+|                      |  |        +--| (96)
+|                      |  |        |  |         +-----Geminocystis_herdmanii
+|                      |  |        |  +---------| (100)
+|                      |  |        |            +----Cyanobacterium_aponinum
+|                      |  |     +--| (100)
+|                      |  |     |  |          +--Aphanothece_hegewaldii
+|                      |  |     |  |  +-------| (100)
+|                      |  |     |  |  |       +--Chroococcus_sp
+|                      |  |     |  +--| (100)
+|                      |  |     |     +-----Gloeothece_verrucosa
+|                      |  |  +--| (100)
+|                      |  |  |  |  +----------Oscillatoria_sp
+|                      |  |  |  +--| (50)
+|                      |  |  |     +-------Kamptonema_sp
+|                      |  +--| (100)
+|                      |     |     +---Microcoleus_PCC7113
+|                      |     |  +--| (100)
+|                      |     |  |  +---Coleofasciculus_sp
+|                      |     +--| (100)
+|                      |        +-------Symploca_sp
+|                 +----| (100)
+|                 |    |  +-----Phormidium_ambiguum
+|                 |    +--| (100)
+|                 |       +----Planktothrix_sp
+|              +--| (84)
+|              |  |  +--Chlorogloeopsis_fritschii
+|              |  +--| (100)
+|              |     +--Fischerella_thermalis
+|           +--| (100)
+|           |  |     +---Scytonema_hofmannii
+|           |  |  +--| (84)
+|           |  |  |  +----Iningainema_sp
+|           |  +--| (98)
+|           |     |     +--Tolypothrix_campylonemoides
+|           |     |  +--| (98)
+|           |     |  |  +--Mastigocladopsis_repens
+|           |     +--| (100)
+|           |        +--Brasilonema_octagenarum
+|        +--| (98)
+|        |  |  +---Rivularia_sp
+|        |  +--| (100)
+|        |     +--Calothrix_sp
+|     +--| (95)
+|     |  |  +--Hassallia_byssoidea
+|     |  +--| (100)
+|     |     +--Spirirestis_rafaelensis
+|  +--| (100)
+|  |  |  +--Desmonostoc_geniculatum
+|  |  +--| (100)
+|  |     +--Nostoc_punctiforme
++--| (100)
+|  +--Anabaenopsis_circularis
+|
++--Anabaena_sp
+
+Tree in newick format:
+
+(Aulosira_sp:0.0005690348,(((((((((((Stenomitos_frigidus:0.1169790697,((Leptolyngbya_boryana:0.0348237055,(Pseudanabaenaceae_cyanobacterium:0.0154916361,Leptolyngbya_sp:0.0232764359)100:0.0233226292)100:0.0716948884,Myxacorys_almedinensis:0.0976918463)100:0.0796481277)100:0.0388905339,(Leptolyngbya_hensonii:0.1380439565,Neosynechococcus_sphagnicola:0.1524576416)53:0.0200579556)55:0.0161790523,(((((Aphanocapsa_montana:0.1905535091,Acaryochloris_sp:0.1820771876)100:0.0617540357,((Synechococcus_sp:0.1520023046,(Synechococcus_lividus:0.0508270286,Thermosynechococcus_elongatus:0.0443198964)100:0.1160628256)100:0.0876121904,Cyanothece_sp:0.1185494361)99:0.0315793744)100:0.0545908297,((Gloeobacter_kilaueensis:0.0821522524,Gloeobacter_violaceus:0.0791856996)100:0.4813361417,Gloeomargarita_lithophora:0.3508470082)99:0.0673220026)93:0.0259306174,Prochlorothrix_hollandica:0.2796875191)32:0.0153829667,Desertifilum_sp-1220:0.1602302822)35:0.0100594315)100:0.0270819963,((((Gloeocapsa_sp:0.1998878914,(Geminocystis_herdmanii:0.1032608517,Cyanobacterium_aponinum:0.0805179761)100:0.1692927174)96:0.0350325016,((Aphanothece_hegewaldii:0.0488227203,Chroococcus_sp:0.0408120732)100:0.1367540725,Gloeothece_verrucosa:0.1055276299)100:0.0478295267)100:0.0461171456,(Oscillatoria_sp:0.1794224044,Kamptonema_sp:0.1362566664)50:0.0193145725)100:0.0493055078,((Microcoleus_PCC7113:0.0753615821,Coleofasciculus_sp:0.0731975704)100:0.0281298921,Symploca_sp:0.1351620565)100:0.0343331602)100:0.0395831347)99:0.0248308894,(Phormidium_ambiguum:0.0977760799,Planktothrix_sp:0.0863394416)100:0.0452355547)100:0.0937620608,(Chlorogloeopsis_fritschii:0.0449292304,Fischerella_thermalis:0.0482828747)100:0.0165509226)84:0.0096918248,((Scytonema_hofmannii:0.0756673276,Iningainema_sp:0.0809742628)84:0.0138936516,((Tolypothrix_campylonemoides:0.0274458909,Mastigocladopsis_repens:0.0333128860)98:0.0135667583,Brasilonema_octagenarum:0.0589162715)100:0.0162348858)98:0.0135526867)100:0.0166707414,(Rivularia_sp:0.0698678420,Calothrix_sp:0.0515554654)100:0.0605175624)98:0.0158070023,(Hassallia_byssoidea:0.0182647087,Spirirestis_rafaelensis:0.0219198345)100:0.0545934774)95:0.0197587536,(Desmonostoc_geniculatum:0.0292491878,Nostoc_punctiforme:0.0400146207)100:0.0279445039)100:0.0405435097,Anabaenopsis_circularis:0.0218796305)100:0.0189299673,Anabaena_sp:0.0004963307);
+
+CONSENSUS TREE
+--------------
+
+Consensus tree is constructed from 1000bootstrap trees
+Log-likelihood of consensus tree: -102135.211613
+Robinson-Foulds distance between ML tree and consensus tree: 0
+
+Branches with support >0.000000% are kept (extended consensus)
+Branch lengths are optimized by maximum likelihood on original alignment
+Numbers in parentheses are bootstrap supports (%)
+
++--Aulosira_sp
+|
+|                                  +------Stenomitos_frigidus
+|                               +--| (100)
+|                               |  |        +--Leptolyngbya_boryana
+|                               |  |    +---| (100)
+|                               |  |    |   |  +--Pseudanabaenaceae_cyanobacterium
+|                               |  |    |   +--| (100)
+|                               |  |    |      +--Leptolyngbya_sp
+|                               |  +----| (100)
+|                               |       +-----Myxacorys_almedinensis
+|                            +--| (55)
+|                            |  |  +-------Leptolyngbya_hensonii
+|                            |  +--| (53)
+|                            |     +--------Neosynechococcus_sphagnicola
+|                         +--| (100)
+|                         |  |              +-----------Aphanocapsa_montana
+|                         |  |           +--| (100)
+|                         |  |           |  +----------Acaryochloris_sp
+|                         |  |        +--| (100)
+|                         |  |        |  |       +--------Synechococcus_sp
+|                         |  |        |  |  +----| (100)
+|                         |  |        |  |  |    |      +--Synechococcus_lividus
+|                         |  |        |  |  |    +------| (100)
+|                         |  |        |  |  |           +--Thermosynechococcus_elongatus
+|                         |  |        |  +--| (99)
+|                         |  |        |     +------Cyanothece_sp
+|                         |  |     +--| (93)
+|                         |  |     |  |                                 +----Gloeobacter_kilaueensis
+|                         |  |     |  |   +-----------------------------| (100)
+|                         |  |     |  |   |                             +----Gloeobacter_violaceus
+|                         |  |     |  +---| (99)
+|                         |  |     |      +---------------------Gloeomargarita_lithophora
+|                         |  |  +--| (32)
+|                         |  |  |  +----------------Prochlorothrix_hollandica
+|                         |  +--| (35)
+|                         |     +---------Desertifilum_sp-1220
+|                      +--| (99)
+|                      |  |           +-----------Gloeocapsa_sp
+|                      |  |        +--| (96)
+|                      |  |        |  |         +-----Geminocystis_herdmanii
+|                      |  |        |  +---------| (100)
+|                      |  |        |            +----Cyanobacterium_aponinum
+|                      |  |     +--| (100)
+|                      |  |     |  |          +--Aphanothece_hegewaldii
+|                      |  |     |  |  +-------| (100)
+|                      |  |     |  |  |       +--Chroococcus_sp
+|                      |  |     |  +--| (100)
+|                      |  |     |     +-----Gloeothece_verrucosa
+|                      |  |  +--| (100)
+|                      |  |  |  |  +----------Oscillatoria_sp
+|                      |  |  |  +--| (50)
+|                      |  |  |     +-------Kamptonema_sp
+|                      |  +--| (100)
+|                      |     |     +---Microcoleus_PCC7113
+|                      |     |  +--| (100)
+|                      |     |  |  +---Coleofasciculus_sp
+|                      |     +--| (100)
+|                      |        +-------Symploca_sp
+|                 +----| (100)
+|                 |    |  +-----Phormidium_ambiguum
+|                 |    +--| (100)
+|                 |       +----Planktothrix_sp
+|              +--| (84)
+|              |  |  +--Chlorogloeopsis_fritschii
+|              |  +--| (100)
+|              |     +--Fischerella_thermalis
+|           +--| (100)
+|           |  |     +---Scytonema_hofmannii
+|           |  |  +--| (84)
+|           |  |  |  +----Iningainema_sp
+|           |  +--| (98)
+|           |     |     +--Tolypothrix_campylonemoides
+|           |     |  +--| (98)
+|           |     |  |  +--Mastigocladopsis_repens
+|           |     +--| (100)
+|           |        +--Brasilonema_octagenarum
+|        +--| (98)
+|        |  |  +---Rivularia_sp
+|        |  +--| (100)
+|        |     +--Calothrix_sp
+|     +--| (95)
+|     |  |  +--Hassallia_byssoidea
+|     |  +--| (100)
+|     |     +--Spirirestis_rafaelensis
+|  +--| (100)
+|  |  |  +--Desmonostoc_geniculatum
+|  |  +--| (100)
+|  |     +--Nostoc_punctiforme
++--| (100)
+|  +--Anabaenopsis_circularis
+|
++--Anabaena_sp
+
+
+Consensus tree in newick format: 
+
+(Aulosira_sp:0.0005689641,(((((((((((Stenomitos_frigidus:0.1170345891,((Leptolyngbya_boryana:0.0348369743,(Pseudanabaenaceae_cyanobacterium:0.0154970893,Leptolyngbya_sp:0.0232871062)100:0.0233333582)100:0.0717285151,Myxacorys_almedinensis:0.0977333037)100:0.0796837502)100:0.0389036014,(Leptolyngbya_hensonii:0.1381152293,Neosynechococcus_sphagnicola:0.1525352845)53:0.0200566468)55:0.0161843743,(((((Aphanocapsa_montana:0.1906633644,Acaryochloris_sp:0.1821837497)100:0.0617712899,((Synechococcus_sp:0.1520897595,(Synechococcus_lividus:0.0508483075,Thermosynechococcus_elongatus:0.0443482718)100:0.1161206665)100:0.0876609192,Cyanothece_sp:0.1186126435)99:0.0315953987)100:0.0546174336,((Gloeobacter_kilaueensis:0.0821748569,Gloeobacter_violaceus:0.0792341707)100:0.4816203260,Gloeomargarita_lithophora:0.3510685373)99:0.0673156772)93:0.0259459587,Prochlorothrix_hollandica:0.2798358986)32:0.0153872538,Desertifilum_sp-1220:0.1603092167)35:0.0100635414)100:0.0270925401,((((Gloeocapsa_sp:0.1999710869,(Geminocystis_herdmanii:0.1032933400,Cyanobacterium_aponinum:0.0805516535)100:0.1693619591)96:0.0350386555,((Aphanothece_hegewaldii:0.0488379275,Chroococcus_sp:0.0408293921)100:0.1368112370,Gloeothece_verrucosa:0.1055677796)100:0.0478454108)100:0.0461335239,(Oscillatoria_sp:0.1795012077,Kamptonema_sp:0.1363171521)50:0.0193152513)100:0.0493249261,((Microcoleus_PCC7113:0.0753917384,Coleofasciculus_sp:0.0732288104)100:0.0281396882,Symploca_sp:0.1352228986)100:0.0343432329)100:0.0395982610)99:0.0248372828,(Phormidium_ambiguum:0.0978133314,Planktothrix_sp:0.0863697134)100:0.0452490617)100:0.0937985550,(Chlorogloeopsis_fritschii:0.0449457257,Fischerella_thermalis:0.0482992266)100:0.0165543218)84:0.0096950659,((Scytonema_hofmannii:0.0756942969,Iningainema_sp:0.0810033732)84:0.0138957866,((Tolypothrix_campylonemoides:0.0274551524,Mastigocladopsis_repens:0.0333235344)98:0.0135711068,Brasilonema_octagenarum:0.0589361982)100:0.0162396959)98:0.0135559577)100:0.0166752776,(Rivularia_sp:0.0698897597,Calothrix_sp:0.0515734604)100:0.0605367632)98:0.0158109595,(Hassallia_byssoidea:0.0182698084,Spirirestis_rafaelensis:0.0219271642)100:0.0546110590)95:0.0197644936,(Desmonostoc_geniculatum:0.0292575479,Nostoc_punctiforme:0.0400280121)100:0.0279523604)100:0.0405566790,Anabaenopsis_circularis:0.0218859783)100:0.0189359944,Anabaena_sp:0.0004964920);
+
+TIME STAMP
+----------
+
+Date and time: Mon Jan 10 02:18:15 2022
+Total CPU time used: 1027.793256 seconds (0h:17m:7s)
+Total wall-clock time used: 1035.286451 seconds (0h:17m:15s)
+

@@ -1,0 +1,97 @@
+FASconCAT INFO:
+SUPERMATRIX FILE	P CODING CHARACTERS [%]	P MISSING DATA [?] [%]	P INDELS [%]	P AMBIGUITIES [%]	P PARSIMONY INFORMATIVE SITES [%]	P GC CONTENT [%]	PRINTED AS FASTA	PRINTED AS NEXUS	PRINTED AS PHYLIP
+supermatrix	99.479	0	0.521	0	53.765	only nuc data	YES	NO	NO
+
+FILE	START POSITION SUPERMATRIX	END POSITION SUPERMATRIX	N SEQUENCES	SEQUENCE TYPE	N CHARACTERS	N MISSING DATA [?]	N INDELS	N AMBIGUITIES	N PARSIMONY INFORMATIVE SITES	N GC CONTENT	N CODING CHARACTERS	A	C	G	T	U	N	Y	R	W	S	K	M	D	V	H	B	F	L	I	P	Q	E
+OG0001746.fa.trimal.fasta	1	59	47	aa	2773	0	53	0	2720	only nuc data	40	313	4	117	175	0	38	54	238	47	272	426	53	98	108	21	0	54	156	56	100	108	282
+OG0001747.fa.trimal.fasta	60	975	47	aa	43052	0	242	0	42810	only nuc data	444	3173	145	2797	2120	0	1471	1579	3000	330	1553	2466	1235	2605	3206	727	0	1451	4203	2420	1568	2206	4555
+OG0001755.fa.trimal.fasta	976	1184	47	aa	9823	0	1	0	9822	only nuc data	132	985	44	738	570	0	417	167	993	195	523	687	156	379	817	131	0	198	895	491	344	431	661
+OG0001757.fa.trimal.fasta	1185	1540	47	aa	16732	0	147	0	16585	only nuc data	283	1164	113	855	1057	0	479	519	1010	174	1360	396	340	644	1235	372	0	314	2247	1047	763	1195	1301
+OG0001758.fa.trimal.fasta	1541	1654	47	aa	5358	0	13	0	5345	only nuc data	80	503	1	644	257	0	109	54	159	0	293	443	292	186	333	1	0	146	546	156	139	426	657
+OG0001764.fa.trimal.fasta	1655	1774	47	aa	5640	0	2	0	5638	only nuc data	76	688	41	412	277	0	157	100	689	1	398	353	52	252	426	220	0	146	446	278	100	261	341
+OG0001765.fa.trimal.fasta	1775	1849	47	aa	3525	0	90	0	3435	only nuc data	60	318	0	54	193	0	32	3	340	3	151	332	81	113	100	147	0	107	487	118	116	343	397
+OG0001772.fa.trimal.fasta	1850	2009	47	aa	7520	0	4	0	7516	only nuc data	84	600	41	581	383	0	321	231	186	138	192	339	250	244	591	51	0	505	1164	517	794	137	251
+OG0001774.fa.trimal.fasta	2010	2097	47	aa	4136	0	16	0	4120	only nuc data	43	285	7	607	279	0	230	100	434	0	221	377	49	181	434	96	0	145	194	148	94	137	102
+OG0001775.fa.trimal.fasta	2098	2188	47	aa	4277	0	1	0	4276	only nuc data	46	277	0	380	268	0	131	42	323	47	231	492	160	133	348	272	0	152	268	245	186	142	179
+OG0001781.fa.trimal.fasta	2189	2309	47	aa	5687	0	1	0	5686	only nuc data	50	494	56	434	214	0	395	97	593	0	281	361	182	388	718	19	0	148	312	485	214	127	168
+OG0001806.fa.trimal.fasta	2310	2371	47	aa	2914	0	0	0	2914	only nuc data	25	67	188	106	414	0	234	48	340	0	165	395	25	26	144	134	0	47	146	155	85	3	192
+OG0001813.fa.trimal.fasta	2372	2508	47	aa	6439	0	34	0	6405	only nuc data	68	623	51	708	298	0	266	318	651	32	230	513	74	278	380	49	0	75	680	209	343	294	333
+OG0001817.fa.trimal.fasta	2509	2789	47	aa	13207	0	26	0	13181	only nuc data	146	947	65	1578	750	0	631	405	1607	79	677	1066	181	413	941	344	0	160	765	774	894	311	593
+OG0001838.fa.trimal.fasta	2790	3269	47	aa	22560	0	199	0	22361	only nuc data	159	1738	39	2241	1662	0	841	598	1059	0	1209	1007	545	1311	2109	192	0	786	1968	1475	1133	914	1534
+OG0001855.fa.trimal.fasta	3270	3633	47	aa	17108	0	59	0	17049	only nuc data	193	1412	96	1044	1032	0	580	439	1259	146	1012	967	485	979	1169	271	0	242	1586	871	450	1066	1943
+OG0001867.fa.trimal.fasta	3634	3878	47	aa	11515	0	62	0	11453	only nuc data	156	1382	82	974	629	0	659	179	595	162	499	622	229	724	774	74	0	344	1022	667	281	440	1115
+supermatrix	1	3878	47	aa	182266	0	950	0	181316	only nuc data	2085	14969	973	14270	10578	0	6991	4933	13476	1354	9267	11242	4389	8954	13833	3121	0	5020	17085	10112	7604	8541	14604
+
+Taxon check
+Taxon	N CONCATENATED SEQs	N INFORMATIVE SEQs	N MISSING SEQs
+Prochlorothrix_hollandica	17	17	0
+Leptolyngbya_sp	17	17	0
+Cyanothece_sp	17	17	0
+Gloeobacter_kilaueensis	17	17	0
+Symploca_sp	17	17	0
+Spirirestis_rafaelensis	17	17	0
+Myxacorys_almedinensis	17	17	0
+Stenomitos_frigidus	17	17	0
+Aulosira_sp	17	17	0
+Anabaena_sp	17	17	0
+Gloeocapsa_sp	17	17	0
+Desmonostoc_geniculatum	17	17	0
+Aphanocapsa_montana	17	17	0
+Leptolyngbya_boryana	17	17	0
+Microcoleus_PCC7113	17	17	0
+Aphanothece_hegewaldii	17	17	0
+Scytonema_hofmannii	17	17	0
+Pseudanabaenaceae_cyanobacterium	17	17	0
+Rivularia_sp	17	17	0
+Hassallia_byssoidea	17	17	0
+Synechococcus_sp	17	17	0
+Geminocystis_herdmanii	17	17	0
+Oscillatoria_sp	17	17	0
+Cyanobacterium_aponinum	17	17	0
+Acaryochloris_sp	17	17	0
+Iningainema_sp	17	17	0
+Brasilonema_octagenarum	17	17	0
+Tolypothrix_campylonemoides	17	17	0
+Mastigocladopsis_repens	17	17	0
+Planktothrix_sp	17	17	0
+Synechococcus_lividus	17	17	0
+Neosynechococcus_sphagnicola	17	17	0
+Nostoc_punctiforme	17	17	0
+Thermosynechococcus_elongatus	17	17	0
+Fischerella_thermalis	17	17	0
+Phormidium_ambiguum	17	17	0
+Chroococcus_sp	17	17	0
+Coleofasciculus_sp	17	17	0
+Gloeobacter_violaceus	17	17	0
+Desertifilum_sp-1220	17	17	0
+Gloeomargarita_lithophora	17	17	0
+Kamptonema_sp	17	17	0
+Anabaenopsis_circularis	17	17	0
+Gloeothece_verrucosa	17	17	0
+Chlorogloeopsis_fritschii	17	17	0
+Calothrix_sp	17	17	0
+Leptolyngbya_hensonii	17	17	0
+
+
+------------------------------------------------------------
+Defined Options:
+-----------------
+READ IN ALL files:	YES
+READ IN SINGLE files:	NO
+FILE HANDLING:	Supermatrix
+SEQUENCE TRANSLATION	NO
+EXCLUDING 3rd POSITION	Remain
+RY CODING	NO
+BUILD CONSENSUS	NO
+RENAME SEQUENCE NAMES	NO
+ABSENT SEQUENCE CODING	Missing
+
+-----------------
+OUTPUT FORMAT:
+PHYLIP:	NO
+NEXUS:	NO
+FASTA:	YES
+PARTITION:	NO
+PARSIMONY:	NO
+PROTTEST:	NO
+------------------------------------------------------------

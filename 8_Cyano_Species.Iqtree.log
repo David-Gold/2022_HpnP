@@ -1,0 +1,98 @@
+IQ-TREE multicore version 1.6.12 for Mac OS X 64-bit built Aug 15 2019
+Developed by Bui Quang Minh, Nguyen Lam Tung, Olga Chernomor,
+Heiko Schmidt, Dominik Schrempf, Michael Woodhams.
+
+Host:    Davids-MacBook-Air-2.local (AVX2, FMA3, 8 GB RAM)
+Command: iqtree -s 7_Cyano_Species.FcC_supermatrix.fas -spp 7_Cyano_Species.partitions.txt -m MFP+MERGE -bb 1000 -pre 8_Iqtree
+Seed:    91870 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Fri Jan  7 06:40:04 2022
+Kernel:  AVX+FMA - 1 threads (4 CPU cores detected)
+
+HINT: Use -nt option to specify number of threads because your CPU has 4 cores!
+HINT: -nt AUTO will automatically determine the best number of threads to use.
+
+Reading partition model file 7_Cyano_Species.partitions.txt ...
+Reading alignment file 7_Cyano_Species.FcC_supermatrix.fas ... Fasta format detected
+Alignment most likely contains protein sequences
+Alignment has 47 sequences with 3878 columns, 2446 distinct patterns
+2085 parsimony-informative, 308 singleton sites, 1485 constant sites
+                                  Gap/Ambiguity  Composition  p-value
+   1  Aulosira_sp                         0.05%    passed    100.00%
+   2  Stenomitos_frigidus                 0.13%    passed     82.24%
+   3  Gloeocapsa_sp                       0.28%    passed     49.16%
+   4  Anabaena_sp                         0.05%    passed    100.00%
+   5  Leptolyngbya_boryana                0.46%    passed     99.94%
+   6  Aphanocapsa_montana                 0.36%    passed     93.67%
+   7  Desmonostoc_geniculatum             0.05%    passed     99.82%
+   8  Scytonema_hofmannii                 0.05%    passed     99.98%
+   9  Aphanothece_hegewaldii              0.23%    passed     72.49%
+  10  Pseudanabaenaceae_cyanobacterium    0.39%    passed     99.91%
+  11  Microcoleus_PCC7113                 0.05%    passed     99.97%
+  12  Hassallia_byssoidea                 0.10%    passed    100.00%
+  13  Rivularia_sp                        0.13%    passed     99.73%
+  14  Synechococcus_sp                    0.18%    passed     97.62%
+  15  Geminocystis_herdmanii              0.52%    failed      0.56%
+  16  Oscillatoria_sp                     0.15%    passed     99.75%
+  17  Cyanothece_sp                       0.10%    passed     99.11%
+  18  Prochlorothrix_hollandica           0.13%    passed     99.82%
+  19  Leptolyngbya_sp                     0.39%    passed     99.75%
+  20  Gloeobacter_kilaueensis             1.06%    passed     97.19%
+  21  Symploca_sp                         0.15%    passed     99.84%
+  22  Myxacorys_almedinensis              0.23%    passed     97.57%
+  23  Spirirestis_rafaelensis             0.05%    passed     99.97%
+  24  Chroococcus_sp                      1.81%    passed     64.17%
+  25  Coleofasciculus_sp                  4.72%    passed     98.29%
+  26  Gloeobacter_violaceus               1.08%    passed     81.17%
+  27  Phormidium_ambiguum                 0.05%    passed    100.00%
+  28  Desertifilum_sp-1220                0.08%    passed     99.85%
+  29  Gloeomargarita_lithophora           0.83%    failed      1.82%
+  30  Anabaenopsis_circularis             0.05%    passed    100.00%
+  31  Kamptonema_sp                       0.98%    passed     92.39%
+  32  Chlorogloeopsis_fritschii           0.03%    passed    100.00%
+  33  Gloeothece_verrucosa                0.15%    passed     96.26%
+  34  Calothrix_sp                        0.13%    passed     99.67%
+  35  Leptolyngbya_hensonii               0.08%    passed     99.38%
+  36  Acaryochloris_sp                    0.39%    passed     97.93%
+  37  Cyanobacterium_aponinum             0.49%    failed      1.62%
+  38  Tolypothrix_campylonemoides         0.03%    passed     99.97%
+  39  Iningainema_sp                      0.08%    passed     99.56%
+  40  Brasilonema_octagenarum             1.24%    passed     99.82%
+  41  Planktothrix_sp                     0.05%    passed     99.81%
+  42  Synechococcus_lividus               0.36%    passed     58.90%
+  43  Mastigocladopsis_repens             0.03%    passed     99.94%
+  44  Neosynechococcus_sphagnicola        0.05%    passed     99.12%
+  45  Nostoc_punctiforme                  0.05%    passed     99.67%
+  46  Thermosynechococcus_elongatus       0.41%    passed     48.30%
+  47  Fischerella_thermalis               6.03%    passed     92.11%
+****  TOTAL                               0.52%  3 sequences failed composition chi2 test (p-value<5%; df=19)
+
+Partition file is not in NEXUS format, assuming RAxML-style partition file...
+Subset	Type	Seqs	Sites	Infor	Invar	Model	Name
+1	AA	47	59	40	15	AA+MERGE	OG0001746
+2	AA	47	916	444	397	AA+MERGE	OG0001747
+3	AA	47	209	132	57	AA+MERGE	OG0001755
+4	AA	47	356	283	54	AA+MERGE	OG0001757
+5	AA	47	114	80	17	AA+MERGE	OG0001758
+6	AA	47	120	76	34	AA+MERGE	OG0001764
+7	AA	47	75	60	9	AA+MERGE	OG0001765
+8	AA	47	160	84	61	AA+MERGE	OG0001772
+9	AA	47	88	43	40	AA+MERGE	OG0001774
+10	AA	47	91	46	37	AA+MERGE	OG0001775
+11	AA	47	121	50	64	AA+MERGE	OG0001781
+12	AA	47	62	25	33	AA+MERGE	OG0001806
+13	AA	47	137	68	64	AA+MERGE	OG0001813
+14	AA	47	281	146	112	AA+MERGE	OG0001817
+15	AA	47	480	159	288	AA+MERGE	OG0001838
+16	AA	47	364	193	142	AA+MERGE	OG0001855
+17	AA	47	245	156	61	AA+MERGE	OG0001867
+Degree of missing data: 0.000
+Info: multi-threading strategy over partitions
+
+
+
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.044 seconds
+NOTE: ModelFinder requires 235 MB RAM!
+Testing LG+F+G on supermatrix...
+LG+F+G4 / LnL: -102967.825 / df: 111 / AIC: 206157.649 / AICc: 206164.251 / BIC: 206852.851
+Selecting individual models for 17 charsets using BIC...
+ No. Model        Score       Charset

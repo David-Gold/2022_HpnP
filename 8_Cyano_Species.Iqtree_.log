@@ -1,0 +1,496 @@
+IQ-TREE multicore version 1.6.12 for Linux 64-bit built Jul 19 2020
+Developed by Bui Quang Minh, Nguyen Lam Tung, Olga Chernomor,
+Heiko Schmidt, Dominik Schrempf, Michael Woodhams.
+
+Host:    c4-88 (AVX2, FMA3, 62 GB RAM)
+Command: iqtree -s 7_Cyano_Species.FcC_supermatrix.fas -spp 7_Cyano_Species.partitions.txt -m MFP+MERGE -bb 1000 -pre 8_Iqtree_
+Seed:    178829 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Fri Jan  7 06:48:31 2022
+Kernel:  AVX+FMA - 1 threads (32 CPU cores detected)
+
+HINT: Use -nt option to specify number of threads because your CPU has 32 cores!
+HINT: -nt AUTO will automatically determine the best number of threads to use.
+
+Reading partition model file 7_Cyano_Species.partitions.txt ...
+Reading alignment file 7_Cyano_Species.FcC_supermatrix.fas ... Fasta format detected
+Alignment most likely contains protein sequences
+Alignment has 47 sequences with 3878 columns, 2446 distinct patterns
+2085 parsimony-informative, 308 singleton sites, 1485 constant sites
+                                  Gap/Ambiguity  Composition  p-value
+   1  Aulosira_sp                         0.05%    passed    100.00%
+   2  Stenomitos_frigidus                 0.13%    passed     82.24%
+   3  Gloeocapsa_sp                       0.28%    passed     49.16%
+   4  Anabaena_sp                         0.05%    passed    100.00%
+   5  Leptolyngbya_boryana                0.46%    passed     99.94%
+   6  Aphanocapsa_montana                 0.36%    passed     93.67%
+   7  Desmonostoc_geniculatum             0.05%    passed     99.82%
+   8  Scytonema_hofmannii                 0.05%    passed     99.98%
+   9  Aphanothece_hegewaldii              0.23%    passed     72.49%
+  10  Pseudanabaenaceae_cyanobacterium    0.39%    passed     99.91%
+  11  Microcoleus_PCC7113                 0.05%    passed     99.97%
+  12  Hassallia_byssoidea                 0.10%    passed    100.00%
+  13  Rivularia_sp                        0.13%    passed     99.73%
+  14  Synechococcus_sp                    0.18%    passed     97.62%
+  15  Geminocystis_herdmanii              0.52%    failed      0.56%
+  16  Oscillatoria_sp                     0.15%    passed     99.75%
+  17  Cyanothece_sp                       0.10%    passed     99.11%
+  18  Prochlorothrix_hollandica           0.13%    passed     99.82%
+  19  Leptolyngbya_sp                     0.39%    passed     99.75%
+  20  Gloeobacter_kilaueensis             1.06%    passed     97.19%
+  21  Symploca_sp                         0.15%    passed     99.84%
+  22  Myxacorys_almedinensis              0.23%    passed     97.57%
+  23  Spirirestis_rafaelensis             0.05%    passed     99.97%
+  24  Chroococcus_sp                      1.81%    passed     64.17%
+  25  Coleofasciculus_sp                  4.72%    passed     98.29%
+  26  Gloeobacter_violaceus               1.08%    passed     81.17%
+  27  Phormidium_ambiguum                 0.05%    passed    100.00%
+  28  Desertifilum_sp-1220                0.08%    passed     99.85%
+  29  Gloeomargarita_lithophora           0.83%    failed      1.82%
+  30  Anabaenopsis_circularis             0.05%    passed    100.00%
+  31  Kamptonema_sp                       0.98%    passed     92.39%
+  32  Chlorogloeopsis_fritschii           0.03%    passed    100.00%
+  33  Gloeothece_verrucosa                0.15%    passed     96.26%
+  34  Calothrix_sp                        0.13%    passed     99.67%
+  35  Leptolyngbya_hensonii               0.08%    passed     99.38%
+  36  Acaryochloris_sp                    0.39%    passed     97.93%
+  37  Cyanobacterium_aponinum             0.49%    failed      1.62%
+  38  Tolypothrix_campylonemoides         0.03%    passed     99.97%
+  39  Iningainema_sp                      0.08%    passed     99.56%
+  40  Brasilonema_octagenarum             1.24%    passed     99.82%
+  41  Planktothrix_sp                     0.05%    passed     99.81%
+  42  Synechococcus_lividus               0.36%    passed     58.90%
+  43  Mastigocladopsis_repens             0.03%    passed     99.94%
+  44  Neosynechococcus_sphagnicola        0.05%    passed     99.12%
+  45  Nostoc_punctiforme                  0.05%    passed     99.67%
+  46  Thermosynechococcus_elongatus       0.41%    passed     48.30%
+  47  Fischerella_thermalis               6.03%    passed     92.11%
+****  TOTAL                               0.52%  3 sequences failed composition chi2 test (p-value<5%; df=19)
+
+Partition file is not in NEXUS format, assuming RAxML-style partition file...
+Subset	Type	Seqs	Sites	Infor	Invar	Model	Name
+1	AA	47	59	40	15	AA+MERGE	OG0001746
+2	AA	47	916	444	397	AA+MERGE	OG0001747
+3	AA	47	209	132	57	AA+MERGE	OG0001755
+4	AA	47	356	283	54	AA+MERGE	OG0001757
+5	AA	47	114	80	17	AA+MERGE	OG0001758
+6	AA	47	120	76	34	AA+MERGE	OG0001764
+7	AA	47	75	60	9	AA+MERGE	OG0001765
+8	AA	47	160	84	61	AA+MERGE	OG0001772
+9	AA	47	88	43	40	AA+MERGE	OG0001774
+10	AA	47	91	46	37	AA+MERGE	OG0001775
+11	AA	47	121	50	64	AA+MERGE	OG0001781
+12	AA	47	62	25	33	AA+MERGE	OG0001806
+13	AA	47	137	68	64	AA+MERGE	OG0001813
+14	AA	47	281	146	112	AA+MERGE	OG0001817
+15	AA	47	480	159	288	AA+MERGE	OG0001838
+16	AA	47	364	193	142	AA+MERGE	OG0001855
+17	AA	47	245	156	61	AA+MERGE	OG0001867
+Degree of missing data: 0.000
+Info: multi-threading strategy over partitions
+
+
+
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.066 seconds
+NOTE: ModelFinder requires 235 MB RAM!
+Testing LG+F+G on supermatrix...
+LG+F+G4 / LnL: -102967.825 / df: 111 / AIC: 206157.649 / AICc: 206164.251 / BIC: 206852.851
+Selecting individual models for 17 charsets using BIC...
+ No. Model        Score       Charset
+   1 LG+I+G4      3585.590    OG0001746
+   2 LG+R5        43411.610   OG0001747
+   3 LG+I+G4      13729.594   OG0001755
+   4 JTT+I+G4     30758.958   OG0001757
+   5 LG+G4        6905.187    OG0001758
+   6 LG+I+G4      8072.932    OG0001764
+   7 LG+I+G4      6756.776    OG0001765
+   8 mtZOA+G4     6530.207    OG0001772
+   9 WAG+I+G4     4379.443    OG0001774
+  10 LG+I+G4      3655.274    OG0001775	0h:39m:8s (17h:9m:33s left)
+  11 LG+I+G4      3798.929    OG0001781	0h:40m:2s (15h:53m:38s left)
+  12 Dayhoff+G4   2409.289    OG0001806	0h:40m:46s (14h:46m:43s left)
+  13 LG+I+G4      6454.101    OG0001813	0h:42m:3s (14h:1m:14s left)
+  14 LG+I+G4      13894.302   OG0001817	0h:46m:1s (14h:11m:22s left)
+  15 LG+I+G4      15908.739   OG0001838	0h:50m:28s (14h:28m:14s left)
+  16 LG+R4        17842.572   OG0001855	0h:55m:28s (14h:50m:57s left)
+  17 LG+I+G4      16655.376   OG0001867	1h:0m:19s (15h:8m:25s left)
+Full partition model BIC score: 205660.025 (LnL: -102218.545  df:148)
+Merging models to increase model fit (about 273 total partition schemes)...
+  18 LG+R5        205647.632  OG0001746+OG0001747	1h:17m:25s (18h:16m:54s left)
+  19 LG+I+G4      205635.537  OG0001746+OG0001755	1h:22m:43s (18h:25m:54s left)
+  20 JTT+I+G4     205694.093  OG0001746+OG0001757	1h:35m:12s (20h:4m:17s left)
+  21 LG+I+G4      205650.204  OG0001746+OG0001758	1h:37m:30s (19h:30m:9s left)
+  22 LG+I+G4      205636.136  OG0001746+OG0001764	1h:40m:5s (19h:1m:57s left)
+  23 LG+I+G4      205645.924  OG0001746+OG0001765	1h:42m:41s (18h:36m:16s left)
+  24 LG+R3        205666.591  OG0001746+OG0001772	1h:45m:2s (18h:9m:50s left)
+  25 LG+I+G4      205653.291  OG0001746+OG0001774	1h:47m:2s (17h:41m:53s left)
+  26 LG+I+G4      205648.538  OG0001746+OG0001775	1h:48m:53s (17h:14m:28s left)
+  27 LG+I+G4      205663.149  OG0001746+OG0001781	1h:50m:56s (16h:50m:45s left)
+  28 Dayhoff+I+G4 205669.107  OG0001746+OG0001806	1h:52m:14s (16h:22m:3s left)
+  29 LG+I+G4      205644.210  OG0001746+OG0001813	1h:54m:13s (16h:1m:4s left)
+  30 LG+I+G4      205642.820  OG0001746+OG0001817	1h:58m:54s (16h:3m:10s left)
+  31 LG+I+G4      205667.396  OG0001746+OG0001838	2h:4m:25s (16h:11m:20s left)
+  32 LG+R4        205643.609  OG0001746+OG0001855	2h:10m:51s (16h:25m:28s left)
+  33 LG+I+G4      205637.604  OG0001746+OG0001867	2h:16m:39s (16h:33m:51s left)
+  34 LG+R5        205662.724  OG0001747+OG0001755	2h:41m:4s (18h:52m:13s left)
+  35 LG+R5        205949.510  OG0001747+OG0001757	3h:7m:38s (21h:15m:57s left)
+  36 LG+R5        205676.347  OG0001747+OG0001758	3h:28m:2s (22h:49m:39s left)
+  37 LG+R5        205643.623  OG0001747+OG0001764	3h:50m:23s (24h:29m:32s left)
+  38 LG+R5        205681.320  OG0001747+OG0001765	4h:8m:20s (25h:35m:47s left)
+  39 LG+R5        205659.018  OG0001747+OG0001772	4h:29m:29s (26h:56m:59s left)
+  40 LG+R5        205651.071  OG0001747+OG0001774	4h:47m:50s (27h:56m:43s left)
+  41 LG+R5        205641.508  OG0001747+OG0001775	5h:5m:3s (28h:46m:12s left)
+  42 LG+R5        205649.848  OG0001747+OG0001781	5h:22m:25s (29h:33m:19s left)
+  43 LG+R5        205669.553  OG0001747+OG0001806	5h:39m:33s (30h:16m:12s left)
+  44 LG+R5        205649.649  OG0001747+OG0001813	5h:58m:39s (31h:6m:39s left)
+  45 LG+R5        205627.033  OG0001747+OG0001817	6h:20m:37s (32h:8m:31s left)
+  46 LG+F+R5      205672.772  OG0001747+OG0001838	6h:44m:12s (33h:14m:42s left)
+  47 LG+F+R5      205616.371  OG0001747+OG0001855	7h:8m:18s (34h:19m:32s left)
+  48 LG+R5        205646.591  OG0001747+OG0001867	7h:32m:58s (35h:23m:21s left)
+  49 JTT+R5       205826.340  OG0001755+OG0001757	7h:49m:34s (35h:46m:38s left)
+  50 LG+R4        205666.925  OG0001755+OG0001758	7h:56m:33s (35h:25m:25s left)
+  51 LG+I+G4      205635.813  OG0001755+OG0001764	8h:3m:20s (35h:3m:55s left)
+  52 LG+I+G4      205653.374  OG0001755+OG0001765	8h:7m:55s (34h:33m:41s left)
+  53 LG+R4        205681.960  OG0001755+OG0001772	8h:14m:36s (34h:13m:5s left)
+  54 LG+I+G4      205656.960  OG0001755+OG0001774	8h:19m:41s (33h:46m:32s left)
+  55 LG+I+G4      205659.527  OG0001755+OG0001775	8h:25m:2s (33h:21m:47s left)
+  56 LG+I+G4      205681.239  OG0001755+OG0001781	8h:30m:3s (32h:56m:29s left)
+  57 LG+I+G4      205688.600  OG0001755+OG0001806	8h:34m:48s (32h:30m:52s left)
+  58 LG+I+G4      205654.219  OG0001755+OG0001813	8h:40m:45s (32h:10m:22s left)
+  59 LG+R4        205650.837  OG0001755+OG0001817	8h:49m:1s (31h:58m:48s left)
+  60 LG+R4        205723.351  OG0001755+OG0001838	8h:57m:51s (31h:49m:23s left)
+  61 LG+R4        205639.963  OG0001755+OG0001855	9h:7m:35s (31h:43m:6s left)
+  62 LG+R5        205651.243  OG0001755+OG0001867	9h:18m:0s (31h:39m:1s left)
+  63 JTT+R4       205745.826  OG0001757+OG0001758	9h:33m:51s (31h:52m:52s left)
+  64 JTT+F+I+G4   205770.615  OG0001757+OG0001764	9h:49m:11s (32h:4m:5s left)
+  65 JTT+I+G4     205683.932  OG0001757+OG0001765	10h:4m:19s (32h:13m:51s left)
+  66 JTT+R5       205858.705  OG0001757+OG0001772	10h:20m:38s (32h:26m:32s left)
+  67 JTT+I+G4     205698.020  OG0001757+OG0001774	10h:33m:45s (32h:28m:35s left)
+  68 JTT+R4       205759.643  OG0001757+OG0001775	10h:47m:37s (32h:32m:24s left)
+  69 JTT+I+G4     205783.907  OG0001757+OG0001781	11h:1m:24s (32h:35m:27s left)
+  70 JTT+I+G4     205716.259  OG0001757+OG0001806	11h:14m:19s (32h:35m:33s left)
+  71 JTT+I+G4     205728.915  OG0001757+OG0001813	11h:30m:35s (32h:44m:45s left)
+  72 JTT+R4       205837.630  OG0001757+OG0001817	11h:51m:13s (33h:5m:28s left)
+  73 JTT+R4       206007.239  OG0001757+OG0001838	12h:9m:2s (33h:17m:22s left)
+  74 JTT+F+R4     205906.526  OG0001757+OG0001855	12h:27m:52s (33h:31m:9s left)
+  75 JTT+I+G4     205685.785  OG0001757+OG0001867	12h:49m:55s (33h:52m:35s left)
+  76 LG+I+G4      205654.349  OG0001758+OG0001764	12h:54m:25s (33h:27m:22s left)
+  77 LG+I+G4      205670.302  OG0001758+OG0001765	12h:59m:40s (33h:4m:38s left)
+  78 LG+R3        205676.801  OG0001758+OG0001772	13h:3m:55s (32h:39m:49s left)
+  79 LG+I+G4      205681.767  OG0001758+OG0001774	13h:7m:16s (32h:13m:18s left)
+  80 LG+I+G4      205663.042  OG0001758+OG0001775	13h:10m:51s (31h:47m:57s left)
+  81 LG+I+G4      205692.663  OG0001758+OG0001781	13h:14m:15s (31h:22m:40s left)
+  82 LG+I+G4      205711.675  OG0001758+OG0001806	13h:16m:56s (30h:56m:18s left)
+  83 LG+I+G4      205671.137  OG0001758+OG0001813	13h:20m:58s (30h:33m:34s left)
+  84 LG+R4        205672.720  OG0001758+OG0001817	13h:28m:29s (30h:19m:5s left)
+  85 LG+F+I+G4    205752.046  OG0001758+OG0001838	13h:35m:53s (30h:4m:33s left)
+  86 LG+F+R4      205675.387  OG0001758+OG0001855	13h:45m:17s (29h:54m:31s left)
+  87 LG+R4        205661.088  OG0001758+OG0001867	13h:54m:46s (29h:44m:41s left)
+  88 LG+I+G4      205649.941  OG0001764+OG0001765	13h:59m:51s (29h:25m:37s left)
+  89 LG+I+G4      205672.889  OG0001764+OG0001772	14h:3m:57s (29h:4m:48s left)
+  90 LG+I+G4      205653.584  OG0001764+OG0001774	14h:7m:4s (28h:42m:23s left)
+  91 LG+I+G4      205650.704  OG0001764+OG0001775	14h:10m:9s (28h:20m:19s left)
+  92 LG+I+G4      205668.909  OG0001764+OG0001781	14h:13m:21s (27h:58m:53s left)
+  93 LG+I+G4      205682.839  OG0001764+OG0001806	14h:16m:1s (27h:36m:50s left)
+  94 LG+I+G4      205648.207  OG0001764+OG0001813	14h:19m:48s (27h:17m:17s left)
+  95 LG+I+G4      205645.310  OG0001764+OG0001817	14h:27m:34s (27h:5m:33s left)
+  96 LG+I+G4      205682.771  OG0001764+OG0001838	14h:35m:25s (26h:54m:4s left)
+  97 LG+F+R4      205656.668  OG0001764+OG0001855	14h:43m:50s (26h:43m:39s left)
+  98 LG+R4        205643.449  OG0001764+OG0001867	14h:53m:3s (26h:34m:45s left)
+  99 LG+R4        205716.680  OG0001765+OG0001772	14h:57m:38s (26h:17m:40s left)
+ 100 LG+I+G4      205674.595  OG0001765+OG0001774	15h:0m:53s (25h:58m:32s left)
+ 101 LG+I+G4      205688.304  OG0001765+OG0001775	15h:4m:42s (25h:40m:41s left)
+ 102 LG+I+G4      205707.974  OG0001765+OG0001781	15h:8m:9s (25h:22m:29s left)
+ 103 LG+I+G4      205704.661  OG0001765+OG0001806	15h:10m:54s (25h:3m:26s left)
+ 104 LG+I+G4      205686.248  OG0001765+OG0001813	15h:15m:40s (24h:47m:57s left)
+ 105 LG+R4        205689.692  OG0001765+OG0001817	15h:23m:45s (24h:38m:0s left)
+ 106 LG+R5        205753.290  OG0001765+OG0001838	15h:31m:42s (24h:27m:53s left)
+ 107 LG+F+R4      205674.425  OG0001765+OG0001855	15h:39m:13s (24h:17m:6s left)
+ 108 LG+I+G4      205648.003  OG0001765+OG0001867	15h:48m:39s (24h:9m:19s left)
+ 109 LG+I+G4      205679.068  OG0001772+OG0001774	15h:52m:15s (23h:52m:44s left)
+ 110 LG+R3        205645.981  OG0001772+OG0001775	15h:54m:32s (23h:34m:27s left)
+ 111 LG+I+G4      205649.265  OG0001772+OG0001781	15h:57m:34s (23h:17m:32s left)
+ 112 LG+R3        205695.975  OG0001772+OG0001806	16h:0m:29s (23h:0m:42s left)
+ 113 LG+I+G4      205658.858  OG0001772+OG0001813	16h:3m:51s (22h:44m:44s left)
+ 114 LG+R4        205655.857  OG0001772+OG0001817	16h:10m:21s (22h:33m:24s left)
+ 115 LG+I+G4      205683.853  OG0001772+OG0001838	16h:17m:11s (22h:22m:35s left)
+ 116 LG+R4        205647.763  OG0001772+OG0001855	16h:25m:40s (22h:14m:3s left)
+ 117 LG+R4        205682.399  OG0001772+OG0001867	16h:33m:47s (22h:5m:3s left)
+ 118 LG+I+G4      205656.996  OG0001774+OG0001775	16h:36m:19s (21h:48m:44s left)
+ 119 LG+I+G4      205664.773  OG0001774+OG0001781	16h:39m:0s (21h:32m:50s left)
+ 120 JTTDCMut+I+G4 205670.805  OG0001774+OG0001806	16h:40m:53s (21h:16m:8s left)
+ 121 LG+I+G4      205649.849  OG0001774+OG0001813	16h:44m:28s (21h:1m:48s left)
+ 122 LG+I+G4      205652.476  OG0001774+OG0001817	16h:50m:3s (20h:50m:8s left)
+ 123 LG+I+G4      205659.041  OG0001774+OG0001838	16h:56m:4s (20h:39m:6s left)
+ 124 LG+R4        205654.878  OG0001774+OG0001855	17h:2m:41s (20h:28m:53s left)
+ 125 LG+I+G4      205661.166  OG0001774+OG0001867	17h:9m:28s (20h:18m:53s left)
+ 126 LG+I+G4      205642.416  OG0001775+OG0001781	17h:11m:22s (20h:3m:16s left)
+ 127 LG+I+G4      205681.165  OG0001775+OG0001806	17h:13m:6s (19h:47m:40s left)
+ 128 LG+I+G4      205638.977  OG0001775+OG0001813	17h:15m:19s (19h:32m:49s left)
+ 129 LG+I+G4      205637.859  OG0001775+OG0001817	17h:21m:23s (19h:22m:29s left)
+ 130 LG+I+G4      205648.938  OG0001775+OG0001838	17h:27m:9s (19h:11m:52s left)
+ 131 LG+R4        205638.303  OG0001775+OG0001855	17h:33m:51s (19h:2m:21s left)
+ 132 LG+R4        205672.864  OG0001775+OG0001867	17h:41m:0s (18h:53m:21s left)
+ 133 Dayhoff+I+G4 205682.060  OG0001781+OG0001806	17h:43m:13s (18h:39m:10s left)
+ 134 LG+I+G4      205647.269  OG0001781+OG0001813	17h:45m:58s (18h:25m:45s left)
+ 135 LG+I+G4      205651.835  OG0001781+OG0001817	17h:51m:32s (18h:15m:21s left)
+ 136 LG+I+G4      205647.483  OG0001781+OG0001838	17h:57m:43s (18h:5m:39s left)
+ 137 LG+R4        205648.118  OG0001781+OG0001855	18h:4m:25s (17h:56m:30s left)
+ 138 LG+I+G4      205688.610  OG0001781+OG0001867	18h:11m:27s (17h:47m:44s left)
+ 139 JTTDCMut+I+G4 205670.154  OG0001806+OG0001813	18h:13m:43s (17h:34m:22s left)
+ 140 LG+R4        205685.981  OG0001806+OG0001817	18h:19m:17s (17h:24m:19s left)
+ 141 LG+I+G4      205676.481  OG0001806+OG0001838	18h:25m:39s (17h:15m:4s left)
+ 142 LG+R4        205671.848  OG0001806+OG0001855	18h:32m:11s (17h:6m:2s left)
+ 143 LG+I+G4      205689.559  OG0001806+OG0001867	18h:39m:5s (16h:57m:21s left)
+ 144 LG+I+G4      205637.242  OG0001813+OG0001817	18h:45m:54s (16h:48m:37s left)
+ 145 LG+I+G4      205644.632  OG0001813+OG0001838	18h:52m:36s (16h:39m:48s left)
+ 146 LG+I+G4      205639.616  OG0001813+OG0001855	19h:0m:40s (16h:32m:13s left)
+ 147 LG+I+G4      205666.993  OG0001813+OG0001867	19h:8m:38s (16h:24m:32s left)
+ 148 LG+R5        205674.654  OG0001817+OG0001838	19h:19m:17s (16h:19m:7s left)
+ 149 LG+R4        205618.126  OG0001817+OG0001855	19h:30m:29s (16h:14m:6s left)
+ 150 LG+R5        205660.454  OG0001817+OG0001867	19h:40m:32s (16h:8m:2s left)
+ 151 LG+R5        205666.078  OG0001838+OG0001855	19h:51m:24s (16h:2m:35s left)
+ 152 LG+R5        205731.856  OG0001838+OG0001867	20h:3m:20s (15h:57m:55s left)
+ 153 LG+R5        205646.124  OG0001855+OG0001867	20h:14m:38s (15h:52m:39s left)
+Merging OG0001747+OG0001855 with BIC score: 205616.371 (LnL: -102147.140  df: 160)
+ 154 LG+F+R5      205605.297  OG0001746+OG0001747+OG0001855	20h:40m:2s (15h:58m:12s left)
+ 155 LG+R5        205613.477  OG0001747+OG0001755+OG0001855	21h:12m:13s (16h:8m:31s left)
+ 156 LG+R6        205907.500  OG0001747+OG0001757+OG0001855	21h:54m:20s (16h:25m:45s left)
+ 157 LG+F+R5      205579.774  OG0001747+OG0001758+OG0001855	22h:22m:0s (16h:31m:33s left)
+ 158 LG+F+R5      205588.974  OG0001747+OG0001764+OG0001855	22h:50m:19s (16h:37m:23s left)
+ 159 LG+F+R5      205610.892  OG0001747+OG0001765+OG0001855	23h:16m:48s (16h:41m:28s left)
+ 160 LG+R5        205607.007  OG0001747+OG0001772+OG0001855	23h:45m:58s (16h:47m:5s left)
+ 161 LG+F+R5      205609.437  OG0001747+OG0001774+OG0001855	24h:11m:57s (16h:50m:3s left)
+ 162 LG+F+R5      205605.921  OG0001747+OG0001775+OG0001855	24h:37m:18s (16h:52m:13s left)
+ 163 LG+F+R5      205615.321  OG0001747+OG0001781+OG0001855	25h:3m:19s (16h:54m:30s left)
+ 164 LG+R5        205619.405  OG0001747+OG0001806+OG0001855	25h:29m:6s (16h:56m:18s left)
+ 165 LG+R5        205598.771  OG0001747+OG0001813+OG0001855	25h:57m:3s (16h:59m:9s left)
+ 166 LG+R5        205572.349  OG0001747+OG0001817+OG0001855	26h:27m:10s (17h:3m:3s left)
+ 167 LG+F+R5      205561.951  OG0001747+OG0001838+OG0001855	26h:59m:10s (17h:7m:44s left)
+ 168 LG+F+R5      205561.059  OG0001747+OG0001855+OG0001867	27h:32m:20s (17h:12m:42s left)
+Merging OG0001747+OG0001855+OG0001867 with BIC score: 205561.059 (LnL: -102131.878  df: 157)
+ 169 LG+F+R5      205552.819  OG0001746+OG0001747+OG0001855+OG0001867	28h:8m:30s (17h:19m:4s left)
+ 170 LG+F+R5      205586.700  OG0001747+OG0001755+OG0001855+OG0001867	28h:48m:28s (17h:27m:14s left)
+ 171 LG+F+R6      205878.197  OG0001747+OG0001757+OG0001855+OG0001867	29h:47m:46s (17h:46m:23s left)
+ 172 LG+F+R5      205526.771  OG0001747+OG0001758+OG0001855+OG0001867	30h:22m:58s (17h:50m:28s left)
+ 173 LG+F+R5      205535.265  OG0001747+OG0001764+OG0001855+OG0001867	30h:58m:18s (17h:54m:9s left)
+ 174 LG+F+R5      205551.644  OG0001747+OG0001765+OG0001855+OG0001867	31h:30m:54s (17h:55m:51s left)
+ 175 LG+F+R5      205592.122  OG0001747+OG0001772+OG0001855+OG0001867	32h:4m:38s (17h:57m:48s left)
+ 176 LG+F+R5      205566.080  OG0001747+OG0001774+OG0001855+OG0001867	32h:30m:52s (17h:55m:11s left)
+ 177 LG+F+R5      205560.393  OG0001747+OG0001775+OG0001855+OG0001867	32h:57m:50s (17h:52m:43s left)
+ 178 LG+F+R5      205575.259  OG0001747+OG0001781+OG0001855+OG0001867	33h:24m:34s (17h:49m:51s left)
+ 179 LG+R5        205608.686  OG0001747+OG0001806+OG0001855+OG0001867	33h:50m:23s (17h:46m:14s left)
+ 180 LG+F+R5      205579.077  OG0001747+OG0001813+OG0001855+OG0001867	34h:17m:41s (17h:43m:8s left)
+ 181 LG+R5        205560.404  OG0001747+OG0001817+OG0001855+OG0001867	34h:48m:1s (17h:41m:19s left)
+ 182 LG+F+R5      205522.458  OG0001747+OG0001838+OG0001855+OG0001867	35h:18m:53s (17h:39m:26s left)
+Merging OG0001747+OG0001838+OG0001855+OG0001867 with BIC score: 205522.458 (LnL: -102124.972  df: 154)
+ 183 LG+F+R5      205508.979  OG0001746+OG0001747+OG0001838+OG0001855+OG0001867	35h:51m:41s (17h:38m:12s left)
+ 184 LG+F+R5      205550.221  OG0001747+OG0001755+OG0001838+OG0001855+OG0001867	36h:29m:55s (17h:39m:15s left)
+ 185 LG+F+R5      205903.550  OG0001747+OG0001757+OG0001838+OG0001855+OG0001867	37h:30m:19s (17h:50m:25s left)
+ 186 LG+F+R5      205492.923  OG0001747+OG0001758+OG0001838+OG0001855+OG0001867	38h:4m:55s (17h:48m:45s left)
+ 187 LG+F+R5      205503.164  OG0001747+OG0001764+OG0001838+OG0001855+OG0001867	38h:39m:29s (17h:46m:43s left)
+ 188 LG+F+R5      205517.628  OG0001747+OG0001765+OG0001838+OG0001855+OG0001867	39h:11m:4s (17h:42m:59s left)
+ 189 LG+F+R5      205557.381  OG0001747+OG0001772+OG0001838+OG0001855+OG0001867	39h:45m:27s (17h:40m:12s left)
+ 190 LG+F+R5      205523.918  OG0001747+OG0001774+OG0001838+OG0001855+OG0001867	40h:17m:8s (17h:35m:54s left)
+ 191 LG+F+R5      205515.599  OG0001747+OG0001775+OG0001838+OG0001855+OG0001867	40h:49m:12s (17h:31m:29s left)
+ 192 LG+F+R5      205532.338  OG0001747+OG0001781+OG0001838+OG0001855+OG0001867	41h:21m:50s (17h:27m:1s left)
+ 193 LG+F+R5      205579.954  OG0001747+OG0001806+OG0001838+OG0001855+OG0001867	41h:53m:5s (17h:21m:41s left)
+ 194 LG+F+R5      205531.042  OG0001747+OG0001813+OG0001838+OG0001855+OG0001867	42h:27m:47s (17h:17m:30s left)
+ 195 LG+F+R5      205593.945  OG0001747+OG0001817+OG0001838+OG0001855+OG0001867	43h:4m:26s (17h:13m:46s left)
+Merging OG0001747+OG0001758+OG0001838+OG0001855+OG0001867 with BIC score: 205492.923 (LnL: -102118.468  df: 152)
+ 196 LG+F+R5      205479.696  OG0001746+OG0001747+OG0001758+OG0001838+OG0001855+OG0001867	43h:39m:37s (17h:9m:8s left)
+ 197 LG+F+R5      205521.987  OG0001747+OG0001755+OG0001758+OG0001838+OG0001855+OG0001867	44h:21m:3s (17h:6m:36s left)
+ 198 LG+F+R5      205882.866  OG0001747+OG0001757+OG0001758+OG0001838+OG0001855+OG0001867	45h:26m:58s (17h:12m:56s left)
+ 199 LG+F+R5      205472.753  OG0001747+OG0001758+OG0001764+OG0001838+OG0001855+OG0001867	46h:5m:17s (17h:8m:17s left)
+ 200 LG+F+R5      205483.534  OG0001747+OG0001758+OG0001765+OG0001838+OG0001855+OG0001867	46h:41m:13s (17h:2m:26s left)
+ 201 LG+F+R5      205525.844  OG0001747+OG0001758+OG0001772+OG0001838+OG0001855+OG0001867	47h:18m:5s (16h:56m:37s left)
+ 202 LG+F+R5      205498.483  OG0001747+OG0001758+OG0001774+OG0001838+OG0001855+OG0001867	47h:52m:44s (16h:49m:43s left)
+ 203 LG+F+R5      205489.376  OG0001747+OG0001758+OG0001775+OG0001838+OG0001855+OG0001867	48h:28m:22s (16h:42m:53s left)
+ 204 LG+F+R5      205505.875  OG0001747+OG0001758+OG0001781+OG0001838+OG0001855+OG0001867	49h:3m:36s (16h:35m:37s left)
+ 205 LG+F+R5      205549.325  OG0001747+OG0001758+OG0001806+OG0001838+OG0001855+OG0001867	49h:37m:42s (16h:27m:43s left)
+ 206 LG+F+R5      205506.118  OG0001747+OG0001758+OG0001813+OG0001838+OG0001855+OG0001867	50h:16m:33s (16h:21m:6s left)
+ 207 LG+F+R5      205570.028  OG0001747+OG0001758+OG0001817+OG0001838+OG0001855+OG0001867	50h:56m:13s (16h:14m:26s left)
+Merging OG0001746+OG0001755 with BIC score: 205468.436 (LnL: -102118.619  df: 149)
+ 208 LG+F+R5      205508.947  OG0001746+OG0001747+OG0001755+OG0001758+OG0001838+OG0001855+OG0001867	51h:38m:52s (16h:8m:23s left)
+ 209 LG+R5        205663.739  OG0001746+OG0001755+OG0001757	51h:54m:37s (15h:53m:45s left)
+ 210 LG+I+G4      205444.420  OG0001746+OG0001755+OG0001764	52h:1m:43s (15h:36m:31s left)
+ 211 LG+I+G4      205463.531  OG0001746+OG0001755+OG0001765	52h:9m:3s (15h:19m:26s left)
+ 212 LG+R4        205492.270  OG0001746+OG0001755+OG0001772	52h:15m:16s (15h:2m:7s left)
+ 213 LG+I+G4      205466.335  OG0001746+OG0001755+OG0001774	52h:20m:44s (14h:44m:43s left)
+ 214 LG+I+G4      205469.416  OG0001746+OG0001755+OG0001775	52h:25m:58s (14h:27m:21s left)
+ 215 LG+I+G4      205492.789  OG0001746+OG0001755+OG0001781	52h:31m:45s (14h:10m:14s left)
+ 216 LG+I+G4      205498.520  OG0001746+OG0001755+OG0001806	52h:37m:0s (13h:53m:6s left)
+ 217 LG+I+G4      205464.183  OG0001746+OG0001755+OG0001813	52h:43m:37s (13h:36m:25s left)
+ 218 LG+R5        205465.807  OG0001746+OG0001755+OG0001817	52h:51m:45s (13h:20m:12s left)
+Merging OG0001746+OG0001755+OG0001764 with BIC score: 205444.420 (LnL: -102119.006  df: 146)
+ 219 LG+F+R5      205479.733  OG0001746+OG0001747+OG0001755+OG0001758+OG0001764+OG0001838+OG0001855+OG0001867	53h:37m:10s (13h:13m:16s left)
+ 220 LG+R5        205647.451  OG0001746+OG0001755+OG0001757+OG0001764	53h:57m:59s (13h:0m:3s left)
+ 221 LG+I+G4      205441.551  OG0001746+OG0001755+OG0001764+OG0001765	54h:7m:23s (12h:44m:5s left)
+ 222 LG+R4        205470.353  OG0001746+OG0001755+OG0001764+OG0001772	54h:16m:27s (12h:28m:6s left)
+ 223 LG+I+G4      205442.440  OG0001746+OG0001755+OG0001764+OG0001774	54h:24m:23s (12h:11m:55s left)
+ 224 LG+I+G4      205446.151  OG0001746+OG0001755+OG0001764+OG0001775	54h:32m:15s (11h:55m:48s left)
+ 225 LG+I+G4      205470.752  OG0001746+OG0001755+OG0001764+OG0001781	54h:40m:19s (11h:39m:48s left)
+ 226 LG+I+G4      205474.447  OG0001746+OG0001755+OG0001764+OG0001806	54h:48m:6s (11h:23m:48s left)
+ 227 LG+I+G4      205442.062  OG0001746+OG0001755+OG0001764+OG0001813	54h:57m:7s (11h:8m:8s left)
+ 228 LG+R5        205437.878  OG0001746+OG0001755+OG0001764+OG0001817	55h:8m:43s (10h:53m:2s left)
+Merging OG0001813+OG0001817 with BIC score: 205421.638 (LnL: -102120.009  df: 143)
+ 229 LG+R5        205431.964  OG0001746+OG0001755+OG0001764+OG0001813+OG0001817	55h:24m:17s (10h:38m:43s left)
+ 230 LG+F+R5      205534.255  OG0001747+OG0001758+OG0001813+OG0001817+OG0001838+OG0001855+OG0001867	56h:6m:59s (10h:29m:28s left)
+ 231 JTT+R5       205655.462  OG0001757+OG0001813+OG0001817	56h:25m:18s (10h:15m:30s left)
+ 232 LG+I+G4      205460.538  OG0001765+OG0001813+OG0001817	56h:33m:3s (9h:59m:38s left)
+ 233 LG+I+G4      205419.999  OG0001772+OG0001813+OG0001817	56h:40m:33s (9h:43m:47s left)
+ 234 LG+I+G4      205413.593  OG0001774+OG0001813+OG0001817	56h:47m:19s (9h:27m:53s left)
+ 235 LG+I+G4      205400.645  OG0001775+OG0001813+OG0001817	56h:53m:52s (9h:12m:1s left)
+ 236 LG+I+G4      205413.135  OG0001781+OG0001813+OG0001817	57h:0m:23s (8h:56m:14s left)
+ 237 LG+I+G4      205440.105  OG0001806+OG0001813+OG0001817	57h:6m:26s (8h:40m:28s left)
+Merging OG0001775+OG0001813+OG0001817 with BIC score: 205400.645 (LnL: -102121.907  df: 140)
+ 238 LG+R5        205417.141  OG0001746+OG0001755+OG0001764+OG0001775+OG0001813+OG0001817	57h:21m:31s (8h:26m:6s left)
+ 239 LG+F+R5      205522.193  OG0001747+OG0001758+OG0001775+OG0001813+OG0001817+OG0001838+OG0001855+OG0001867	58h:4m:59s (8h:15m:46s left)
+ 240 LG+R5        205698.730  OG0001757+OG0001775+OG0001813+OG0001817	58h:23m:52s (8h:1m:46s left)
+ 241 LG+R4        205456.072  OG0001765+OG0001775+OG0001813+OG0001817	58h:32m:39s (7h:46m:24s left)
+ 242 LG+I+G4      205396.802  OG0001772+OG0001775+OG0001813+OG0001817	58h:40m:33s (7h:30m:58s left)
+ 243 LG+I+G4      205395.268  OG0001774+OG0001775+OG0001813+OG0001817	58h:48m:44s (7h:15m:38s left)
+ 244 LG+I+G4      205391.334  OG0001775+OG0001781+OG0001813+OG0001817	58h:56m:17s (7h:0m:17s left)
+ 245 LG+I+G4      205420.344  OG0001775+OG0001806+OG0001813+OG0001817	59h:3m:24s (6h:44m:57s left)
+Merging OG0001772+OG0001781 with BIC score: 205389.885 (LnL: -102124.791  df: 138)
+ 246 LG+R5        205442.885  OG0001746+OG0001755+OG0001764+OG0001772+OG0001781	59h:15m:4s (6h:30m:11s left)
+ 247 LG+F+R5      205446.970  OG0001747+OG0001758+OG0001772+OG0001781+OG0001838+OG0001855+OG0001867	60h:0m:54s (6h:19m:2s left)
+ 248 JTT+R5       205679.202  OG0001757+OG0001772+OG0001781	60h:17m:24s (6h:4m:39s left)
+ 249 LG+R4        205465.380  OG0001765+OG0001772+OG0001781	60h:24m:28s (5h:49m:20s left)
+ 250 LG+I+G4      205408.544  OG0001772+OG0001774+OG0001781	60h:28m:45s (5h:33m:50s left)
+ 251 LG+I+G4      205387.602  OG0001772+OG0001775+OG0001781+OG0001813+OG0001817	60h:40m:22s (5h:19m:4s left)
+ 252 LG+R4        205426.466  OG0001772+OG0001781+OG0001806	60h:44m:7s (5h:3m:40s left)
+Merging OG0001747+OG0001758+OG0001765+OG0001838+OG0001855+OG0001867 with BIC score: 205380.496 (LnL: -102132.490  df: 135)
+ 253 LG+F+R5      205410.450  OG0001746+OG0001747+OG0001755+OG0001758+OG0001764+OG0001765+OG0001838+OG0001855+OG0001867	61h:40m:44s (4h:52m:32s left)
+ 254 LG+F+R5      205749.742  OG0001747+OG0001757+OG0001758+OG0001765+OG0001838+OG0001855+OG0001867	62h:51m:48s (4h:42m:8s left)
+ 255 LG+F+R5      205445.762  OG0001747+OG0001758+OG0001765+OG0001772+OG0001781+OG0001838+OG0001855+OG0001867	63h:31m:51s (4h:29m:4s left)
+ 256 LG+F+R5      205388.035  OG0001747+OG0001758+OG0001765+OG0001774+OG0001838+OG0001855+OG0001867	64h:9m:43s (4h:15m:38s left)
+ 257 LG+F+R5      205513.375  OG0001747+OG0001758+OG0001765+OG0001775+OG0001813+OG0001817+OG0001838+OG0001855+OG0001867	64h:56m:42s (4h:2m:35s left)
+ 258 LG+F+R5      205439.875  OG0001747+OG0001758+OG0001765+OG0001806+OG0001838+OG0001855+OG0001867	65h:32m:38s (3h:48m:38s left)
+Merging OG0001774+OG0001775+OG0001813+OG0001817 with BIC score: 205375.119 (LnL: -102142.197  df: 132)
+ 259 LG+R5        205388.949  OG0001746+OG0001755+OG0001764+OG0001774+OG0001775+OG0001813+OG0001817	65h:49m:58s (3h:33m:30s left)
+ 260 LG+F+R5      205517.600  OG0001747+OG0001758+OG0001765+OG0001774+OG0001775+OG0001813+OG0001817+OG0001838+OG0001855+OG0001867	66h:34m:23s (3h:19m:43s left)
+ 261 JTTDCMut+R5  205681.802  OG0001757+OG0001774+OG0001775+OG0001813+OG0001817	66h:51m:27s (3h:4m:26s left)
+ 262 LG+I+G4      205377.437  OG0001772+OG0001774+OG0001775+OG0001781+OG0001813+OG0001817	67h:3m:35s (2h:48m:55s left)
+ 263 LG+I+G4      205393.340  OG0001774+OG0001775+OG0001806+OG0001813+OG0001817	67h:12m:28s (2h:33m:19s left)
+BEST-FIT PARTITION MODEL: 
+  charpartition BIC = LG+I+G4: OG0001746 OG0001755 OG0001764, LG+F+R5: OG0001747 OG0001758 OG0001765 OG0001838 OG0001855 OG0001867, JTT+I+G4: OG0001757, LG+I+G4: OG0001772 OG0001781, LG+I+G4: OG0001774 OG0001775 OG0001813 OG0001817, Dayhoff+G4: OG0001806;
+Agglomerative model selection: (((OG0001746,OG0001755)5:205468,OG0001764)6:205444,(((((OG0001747,OG0001855)1:205616,OG0001867)2:205561,OG0001838)3:205522,OG0001758)4:205493,OG0001765)10:205380,OG0001757,(OG0001772,OG0001781)9:205390,(OG0001774,(OG0001775,(OG0001813,OG0001817)7:205422)8:205401)11:205375,OG0001806)
+Merging into 6 partitions...
+Partition information was printed to 8_Iqtree_.best_scheme.nex
+Partition information in Raxml format was printed to 8_Iqtree_.best_scheme
+
+All model information printed to 8_Iqtree_.model.gz
+CPU time for ModelFinder: 241776.790 seconds (67h:9m:36s)
+Wall-clock time for ModelFinder: 241948.828 seconds (67h:12m:28s)
+NOTE: State(s) W not present in partition OG0001806 and thus removed from Markov process to prevent numerical problems
+NOTE: 1 states (see above) are not present and thus removed from Markov process to prevent numerical problems
+Generating 1000 samples for ultrafast bootstrap (seed: 178828)...
+
+NOTE: 98 MB RAM (0 GB) is required!
+Estimate model parameters (epsilon = 0.100)
+Initial log-likelihood: -103227.512
+Current log-likelihood at step 1: -102218.859
+Current log-likelihood at step 2: -102175.075
+Current log-likelihood at step 3: -102158.400
+Current log-likelihood at step 4: -102151.575
+Current log-likelihood at step 5: -102150.311
+Current log-likelihood at step 6: -102149.147
+Current log-likelihood at step 7: -102149.076
+Partition-specific rates:  1.345 0.889 2.057 0.537 0.827 0.449
+Parameters optimization took 6 rounds (31.072 sec)
+
+Computing ML distances based on estimated model parameters... 3.178 sec
+Computing BIONJ tree...
+0.003 seconds
+Log-likelihood of BIONJ tree: -102165.638
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Generating 98 parsimony trees... 5.403 second
+Computing log-likelihood of 98 initial trees ... 82.849 seconds
+Current best score: -102142.481
+
+Do NNI search on 20 best initial trees
+Estimate model parameters (epsilon = 0.100)
+Initial log-likelihood: -102138.380
+Current log-likelihood at step 1: -102137.498
+Current log-likelihood at step 2: -102137.173
+Current log-likelihood at step 3: -102137.171
+Parameters optimization took 2 rounds (9.492 sec)
+
+BETTER TREE FOUND at iteration 1: -102137.171
+Estimate model parameters (epsilon = 0.100)
+Initial log-likelihood: -102135.499
+Current log-likelihood at step 1: -102135.391
+Current log-likelihood at step 2: -102135.372
+Parameters optimization took 1 rounds (7.104 sec)
+
+BETTER TREE FOUND at iteration 2: -102135.372
+Estimate model parameters (epsilon = 0.100)
+Initial log-likelihood: -102135.236
+Current log-likelihood at step 1: -102135.215
+Parameters optimization took 0 rounds (2.662 sec)
+
+UPDATE BEST LOG-LIKELIHOOD: -102135.215
+Iteration 10 / LogL: -102135.673 / Time: 0h:3m:28s
+Iteration 20 / LogL: -102173.889 / Time: 0h:4m:44s
+Finish initializing candidate tree set (5)
+Current best tree score: -102135.215 / CPU time: 246.466
+Number of iterations: 20
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Iteration 30 / LogL: -102135.224 / Time: 0h:6m:19s (0h:15m:42s left)
+Iteration 40 / LogL: -102173.778 / Time: 0h:7m:54s (0h:12m:33s left)
+Iteration 50 / LogL: -102135.395 / Time: 0h:9m:24s (0h:9m:59s left)
+Log-likelihood cutoff on original alignment: -102217.234
+Iteration 60 / LogL: -102135.263 / Time: 0h:10m:53s (0h:7m:45s left)
+Iteration 70 / LogL: -102135.264 / Time: 0h:12m:24s (0h:5m:45s left)
+Iteration 80 / LogL: -102137.303 / Time: 0h:13m:47s (0h:3m:50s left)
+Iteration 90 / LogL: -102135.518 / Time: 0h:15m:11s (0h:2m:2s left)
+Iteration 100 / LogL: -102135.240 / Time: 0h:16m:41s (0h:0m:20s left)
+Log-likelihood cutoff on original alignment: -102217.234
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 1.000
+TREE SEARCH COMPLETED AFTER 103 ITERATIONS / Time: 0h:17m:9s
+
+--------------------------------------------------------------------
+|                    FINALIZING TREE SEARCH                        |
+--------------------------------------------------------------------
+Performs final model parameters optimization
+Estimate model parameters (epsilon = 0.010)
+Initial log-likelihood: -102135.215
+Current log-likelihood at step 1: -102135.211
+Partition-specific rates:  1.355 0.886 2.068 0.536 0.827 0.455
+Parameters optimization took 0 rounds (1.743 sec)
+
+BEST SCORE FOUND : -102135.211
+Creating bootstrap support values...
+Split supports printed to NEXUS file 8_Iqtree_.splits.nex
+Total tree length: 6.591
+
+Total number of iterations: 103
+CPU time used for tree search: 987.404 sec (0h:16m:27s)
+Wall-clock time used for tree search: 991.016 sec (0h:16m:31s)
+Total CPU time used: 1027.793 sec (0h:17m:7s)
+Total wall-clock time used: 1031.515 sec (0h:17m:11s)
+
+Computing bootstrap consensus tree...
+Reading input file 8_Iqtree_.splits.nex...
+47 taxa and 155 splits.
+Consensus tree written to 8_Iqtree_.contree
+Reading input trees file 8_Iqtree_.contree
+Log-likelihood of consensus tree: -102135.212
+
+Analysis results written to: 
+  IQ-TREE report:                8_Iqtree_.iqtree
+  Maximum-likelihood tree:       8_Iqtree_.treefile
+  Likelihood distances:          8_Iqtree_.mldist
+  Best partitioning scheme:      8_Iqtree_.best_scheme.nex
+           in RAxML format:      8_Iqtree_.best_scheme
+
+Ultrafast bootstrap approximation results written to:
+  Split support values:          8_Iqtree_.splits.nex
+  Consensus tree:                8_Iqtree_.contree
+  Screen log file:               8_Iqtree_.log
+
+Date and Time: Mon Jan 10 02:18:15 2022

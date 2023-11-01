@@ -1,0 +1,272 @@
+################################
+################################
+# Collect full length sequences
+################################
+################################
+
+# Data from all alignments collected and formatted into file "0_Seqeunce_ID_Breakdown.txt"
+# Extract second column and remove duplicates
+
+cut -f 2 0_Seqeunce_ID_Breakdown.txt > tmp1.txt
+sort -u tmp1.txt > tmp2.txt
+
+# Result: 144 unique identifiers. Submitted to Batch entrez (https://www.ncbi.nlm.nih.gov/sites/batchentrez)
+	# Protein search returned 126/144 IDs:
+		# Received lines: 144
+		# Rejected lines: 18
+		# Removed duplicates: 0
+		# Passed to Entrez: 126
+	# Additional sequences retreived from NCBI manually
+	# Sequence "Bac-2909926281.Aulosira.sp.FACHB-615.Cy" not identified in NCBI. Found alternative sequence in NCBI through BLASTP(WP_190873396.1)
+# Modify names to match original structure
+# Remove potentially problematic characters: '()
+# File name: "0_Starting_Seqs.fasta"
+
+rm tmp*
+
+################################
+################################
+# Identify protein domains
+################################
+################################
+
+# Requires HMMER (http://hmmer.org)
+
+brew install hmmer
+
+# Requires pfam_scan 
+	# ftp://ftp.ebi.ac.uk/pub/databases/Pfam//Tools/PfamScan.tar.gz
+	# pfam_scan can be installed with Conda. Add conda cask to homebrew:
+	
+conda install -c bioconda pfam_scan
+
+#################################
+# Identify domains with pfam_scan 
+#################################
+
+mkdir Pfam
+cd Pfam
+
+# Install the Pfam database
+
+wget ftp://ftp.ebi.ac.uk/pub/databases/Pfam/current_release/Pfam-A.hmm.gz
+wget ftp://ftp.ebi.ac.uk/pub/databases/Pfam/current_release/Pfam-A.hmm.dat.gz  
+gunzip Pfam-A.hmm.gz
+gunzip Pfam-A.hmm.dat.gz
+hmmpress Pfam-A.hmm
+
+# Run PfamScan
+
+cd ../
+pfam_scan.pl \
+-outfile 1_Pfam_output.txt \
+-fasta 0_Starting_Seqs.fasta -dir ./Pfam
+
+###########
+# Cleanup
+###########
+
+rm -r Pfam
+
+###############################
+###############################
+# Extract domains with SAMTOOLS
+###############################
+###############################
+
+#############################
+# Extract B12-binding domain
+#############################
+
+grep '.* B12-binding *' 1_Pfam_output.txt > tmp1
+# use squeeze flag (-s) in tr to replace all white spaces with a tab
+tr -s ' ' \\t < tmp1 > tmp2
+# extract envelope coordinates
+awk -v OFS='\t' '{print $1,$4,$5}' tmp2 > tmp3
+# Concatenate domains broken into multiple fragments 
+awk -F'\t' -v OFS='\t' '{x=$1;$1="";a[x]=a[x]$0}END{for(x in a)print x,a[x]}' tmp3 > tmp4
+tr -s '\t' \\t < tmp4 > tmp5
+# Extract name, first envelope coordinate, last envelope coordinate
+awk -v OFS='\t' '{print "\047"$1"\047"":"$2"-"$NF}' tmp5 > tmp6
+# Extract domains with samtools
+xargs samtools faidx --length 100000000 0_Starting_Seqs.fasta < tmp6 > 2_B12-binding_Domains.fasta
+rm tmp*
+
+#############################
+# Extract Radical_SAM domain
+#############################
+
+grep '.* Radical_SAM *' 1_Pfam_output.txt > tmp1
+# use squeeze flag (-s) in tr to replace all white spaces with a tab
+tr -s ' ' \\t < tmp1 > tmp2
+# extract envelope coordinates
+awk -v OFS='\t' '{print $1,$4,$5}' tmp2 > tmp3
+# Concatenate domains broken into multiple fragments 
+awk -F'\t' -v OFS='\t' '{x=$1;$1="";a[x]=a[x]$0}END{for(x in a)print x,a[x]}' tmp3 > tmp4
+tr -s '\t' \\t < tmp4 > tmp5
+# Extract name, first envelope coordinate, last envelope coordinate
+awk -v OFS='\t' '{print "\047"$1"\047"":"$2"-"$NF}' tmp5 > tmp6
+# Extract domains with samtools
+xargs samtools faidx --length 100000000 0_Starting_Seqs.fasta < tmp6 > 2_Radical_SAM_Domains.fasta
+rm tmp*
+
+#########################
+# Extract DUF4070 domain
+#########################
+
+grep '.* DUF4070 *' 1_Pfam_output.txt > tmp1
+# use squeeze flag (-s) in tr to replace all white spaces with a tab
+tr -s ' ' \\t < tmp1 > tmp2
+# extract envelope coordinates
+awk -v OFS='\t' '{print $1,$4,$5}' tmp2 > tmp3
+# Concatenate domains broken into multiple fragments 
+awk -F'\t' -v OFS='\t' '{x=$1;$1="";a[x]=a[x]$0}END{for(x in a)print x,a[x]}' tmp3 > tmp4
+tr -s '\t' \\t < tmp4 > tmp5
+# Extract name, first envelope coordinate, last envelope coordinate
+awk -v OFS='\t' '{print "\047"$1"\047"":"$2"-"$NF}' tmp5 > tmp6
+# Extract domains with samtools
+xargs samtools faidx --length 100000000 0_Starting_Seqs.fasta < tmp6 > 2_DUF4070_Domains.fasta
+rm tmp*
+
+#####################################################
+#####################################################
+# Align domains and stitch together with FASconCAT-G
+#####################################################
+#####################################################
+
+######################################################
+# Remove domain coordinates from sequence identifiers
+######################################################
+
+sed 's/:.*$//' 2_B12-binding_Domains.fasta > 2_B12-binding_Domains.cleaned.fasta
+sed 's/:.*$//' 2_DUF4070_Domains.fasta > 2_DUF4070_Domains.cleaned.fasta
+sed 's/:.*$//' 2_Radical_SAM_Domains.fasta > 2_Radical_SAM_Domains.cleaned.fasta
+
+###################
+# Align with MAAFT
+###################
+
+einsi 2_B12-binding_Domains.cleaned.fasta > 3_B12-binding_Domains.cleaned.maaft.fasta
+einsi 2_DUF4070_Domains.cleaned.fasta > 3_DUF4070_Domains.cleaned.maaft.fasta
+einsi 2_Radical_SAM_Domains.cleaned.fasta > 3_Radical_SAM_Domains.cleaned.maaft.fasta
+
+######################################
+# Combine alignments with FASconCAT-G
+#####################################
+
+mkdir temp
+cp 3* temp
+cd temp
+
+# Download Perl script and make it executable
+wget https://raw.githubusercontent.com/PatrickKueck/FASconCAT-G/master/FASconCAT-G_v1.05.pl
+chmod u+x FASconCAT-G_v1.05.pl
+
+# Run FASconCAT-G
+perl ./FASconCAT-G_v1.05.pl -s
+
+###############################################
+# Clean up poorly aligned regions with trimAl
+###############################################
+
+# Install trimAl
+brew install brewsci/bio/trimal
+
+trimal -in FcC_supermatrix.fas -gappyout -out ../4_HpnP_Alignment.fasta
+
+##########
+# Cleanup
+##########
+
+cd ../
+rm -r temp
+
+###########################
+###########################
+# Create Tree with IQTREE
+###########################
+###########################
+
+iqtree -s 4_HpnP_Alignment.fasta -m MFP -bb 1000 -nt 4
+
+mv 4_HpnP_Alignment.fasta.contree 4_HpnP_Alignment.fasta.contree.tree
+
+################################################
+################################################
+# Create species tree of relevant cyanobacteria
+################################################
+################################################
+
+# Use species names to collect taxon IDs from NCBI
+	# https://www.ncbi.nlm.nih.gov/Taxonomy/TaxIdentifier/tax_identifier.cgi
+	# Save as file "5_Cyano_Taxa.txt"
+	# Additional IDs:
+		# Gloeomargaritaceae cyanobacterium C42_A2020_066 -- 2747801
+		# Leptolyngbya sp. NIES-2104 -- 1552121
+		
+	
+# Collect all protein sequences from each taxon in the Identical Protein Groups (igp) database
+	# Requires Entrez Programming Utilities (E-utilities)
+	# https://www.ncbi.nlm.nih.gov/home/tools/
+	
+mkdir tmp
+cd tmp
+
+esearch -db ipg -query "txid1552121[Organism]" | efetch -format fasta > Leptolyngbya_sp._NIES-2104-txid1552121.fasta
+esearch -db ipg -query "txid2747801[Organism]" | efetch -format fasta > Gloeomargaritaceae_cyanobacterium_C42_A2020_066-txid27478017.fasta
+esearch -db ipg -query "txid2777976[Organism]" | efetch -format fasta > Pseudanabaenaceae_cyanobacterium_LEGE_13415-txid2777976.fasta
+esearch -db ipg -query "txid2692777[Organism]" | efetch -format fasta > Aulosira_sp._FACHB-615-txid2692777.fasta
+esearch -db ipg -query "txid2692772[Organism]" | efetch -format fasta > Anabaena_sp._FACHB-83-txid2692772.fasta
+esearch -db ipg -query "txid395961[Organism]" | efetch -format fasta > Cyanothece_sp._PCC_7425-txid395961.fasta
+esearch -db ipg -query "txid2692846[Organism]" | efetch -format fasta > Oscillatoria_sp._FACHB-1406-txid2692846.fasta
+esearch -db ipg -query "txid2107698[Organism]" | efetch -format fasta > Stenomitos_frigidus_ULC18-txid2107698.fasta
+esearch -db ipg -query "txid102232[Organism]" | efetch -format fasta > Gloeocapsa_sp._PCC_73106-txid102232.fasta
+esearch -db ipg -query "txid1173027[Organism]" | efetch -format fasta > Allocoleopsis_franciscana_PCC_7113-txid1173027.fasta
+esearch -db ipg -query "txid2607808[Organism]" | efetch -format fasta > Kamptonema_sp._SIO1D9-txid2607808.fasta
+esearch -db ipg -query "txid1085406[Organism]" | efetch -format fasta > Anabaenopsis_circularis_NIES-21-txid1085406.fasta
+esearch -db ipg -query "txid63737[Organism]" | efetch -format fasta > Nostoc_punctiforme_PCC_73102-txid63737.fasta
+esearch -db ipg -query "txid1874567[Organism]" | efetch -format fasta > Desmonostoc_geniculatum_HA4340-LM1-txid1874567.fasta
+esearch -db ipg -query "txid2019663[Organism]" | efetch -format fasta > Fischerella_thermalis_CCMEE_5273-txid2019663.fasta
+esearch -db ipg -query "txid211165[Organism]" | efetch -format fasta > Chlorogloeopsis_fritschii_PCC_6912-txid211165.fasta
+esearch -db ipg -query "txid448371[Organism]" | efetch -format fasta > Rivularia_sp._IAM_M-261-txid448371.fasta
+esearch -db ipg -query "txid2005461[Organism]" | efetch -format fasta > Calothrix_sp._NIES-4101-txid2005461.fasta
+esearch -db ipg -query "txid2835094[Organism]" | efetch -format fasta > Spirirestis_rafaelensis_WJT71-NPBG6-txid2835094.fasta
+esearch -db ipg -query "txid1304833[Organism]" | efetch -format fasta > Hassallia_byssoidea_VB512170-txid1304833.fasta
+esearch -db ipg -query "txid128403[Organism]" | efetch -format fasta > Scytonema_hofmannii_PCC_7110-txid128403.fasta
+esearch -db ipg -query "txid1245935[Organism]" | efetch -format fasta > Tolypothrix_campylonemoides_VB511288-txid1245935.fasta
+esearch -db ipg -query "txid221287[Organism]" | efetch -format fasta > Mastigocladopsis_repens-txid221287.fasta
+esearch -db ipg -query "txid417115[Organism]" | efetch -format fasta > Brasilonema_octagenarum_UFV-OR1-txid417115.fasta
+esearch -db ipg -query "txid2748662[Organism]" | efetch -format fasta > Iningainema_sp._BLCCT55-txid2748662.fasta
+esearch -db ipg -query "txid2768886[Organism]" | efetch -format fasta > Coleofasciculus_sp._Co-bin14-txid2768886.fasta
+esearch -db ipg -query "txid454136[Organism]" | efetch -format fasta > Phormidium_ambiguum_IAM_M-71-txid454136.fasta
+esearch -db ipg -query "txid2692856[Organism]" | efetch -format fasta > Planktothrix_sp._FACHB-1375-txid2692856.fasta
+esearch -db ipg -query "txid669359[Organism]" | efetch -format fasta > Geminocystis_herdmanii-txid669359.fasta
+esearch -db ipg -query "txid755178[Organism]" | efetch -format fasta > Cyanobacterium_aponinum_PCC_10605-txid755178.fasta
+esearch -db ipg -query "txid1974212[Organism]" | efetch -format fasta > Chroococcus_sp._FPU101-txid1974212.fasta
+esearch -db ipg -query "txid2107694[Organism]" | efetch -format fasta > Aphanothece_hegewaldii_CCALA_016-txid2107694.fasta
+esearch -db ipg -query "txid497965[Organism]" | efetch -format fasta > Gloeothece_verrucosa_PCC_7822-txid497965.fasta
+esearch -db ipg -query "txid2607783[Organism]" | efetch -format fasta > Symploca_sp._SIO2C1-txid2607783.fasta
+esearch -db ipg -query "txid197221[Organism]" | efetch -format fasta > Thermosynechococcus_vestitus_BP-1-txid197221.fasta
+esearch -db ipg -query "txid1917166[Organism]" | efetch -format fasta > Synechococcus_lividus_PCC_6715-txid1917166.fasta
+esearch -db ipg -query "txid195253[Organism]" | efetch -format fasta > Synechococcus_sp._PCC_6312-txid195253.fasta
+esearch -db ipg -query "txid1764569[Organism]" | efetch -format fasta > Acaryochloris_sp._RCC1774-txid1764569.fasta
+esearch -db ipg -query "txid1574475[Organism]" | efetch -format fasta > Aphanocapsa_montana_BDHKU210001-txid1574475.fasta
+esearch -db ipg -query "txid317619[Organism]" | efetch -format fasta > Prochlorothrix_hollandica_PCC_9006-txid317619.fasta
+esearch -db ipg -query "txid1552121[Organism]" | efetch -format fasta > Leptolyngbya_sp._NIES-2104-txid1552121.fasta
+esearch -db ipg -query "txid1973484[Organism]" | efetch -format fasta > Leptolyngbya_boryana_NIES-2135-txid1973484.fasta
+esearch -db ipg -query "txid2690445[Organism]" | efetch -format fasta > Myxacorys_almedinensis_A-txid2690445.fasta
+esearch -db ipg -query "txid1781255[Organism]" | efetch -format fasta > Desertifilum_sp._IPPAS_B-1220-txid1781255.fasta
+esearch -db ipg -query "txid1497020[Organism]" | efetch -format fasta > Neosynechococcus_sphagnicola_sy1-txid1497020.fasta
+esearch -db ipg -query "txid1183438[Organism]" | efetch -format fasta > Gloeobacter_kilaueensis_JS1-txid1183438.fasta
+esearch -db ipg -query "txid251221[Organism]" | efetch -format fasta > Gloeobacter_violaceus_PCC_7421-txid251221.fasta
+esearch -db ipg -query "txid1188229[Organism]" | efetch -format fasta > Gloeomargarita_lithophora_Alchichica-D10-txid1188229.fasta
+
+#############
+# OrthoFinder
+#############
+
+# Start up Orthofinder
+#
+# cd ..
+# python /Users/davidgold/Downloads/OrthoFinder_source/orthofinder.py -f tmp
+# 
