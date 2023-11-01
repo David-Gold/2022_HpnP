@@ -1,0 +1,52 @@
+code	|	name	|	preferred name	|	taxid
+1	|	Pseudanabaenaceae cyanobacterium LEGE 13415	|	 	|	2777976
+1	|	Aulosira sp. FACHB-615	|	 	|	2692777
+1	|	Anabaena sp. FACHB-83	|	 	|	2692772
+1	|	Cyanothece sp. PCC 7425	|	 	|	395961
+1	|	Oscillatoria sp. FACHB-1406	|	 	|	2692846
+1	|	Stenomitos frigidus ULC18	|	 	|	2107698
+1	|	Gloeocapsa sp. PCC 73106	|	 	|	102232
+1	|	Allocoleopsis franciscana PCC 7113	|	 	|	1173027
+1	|	Kamptonema sp. SIO1D9	|	 	|	2607808
+1	|	Anabaenopsis circularis NIES-21	|	 	|	1085406
+1	|	Nostoc punctiforme PCC 73102	|	 	|	63737
+1	|	Desmonostoc geniculatum HA4340-LM1	|	 	|	1874567
+1	|	Fischerella thermalis CCMEE 5273	|	 	|	2019663
+1	|	Chlorogloeopsis fritschii PCC 6912	|	 	|	211165
+1	|	Rivularia sp. IAM M-261	|	 	|	448371
+1	|	Calothrix sp. NIES-4101	|	 	|	2005461
+1	|	Spirirestis rafaelensis WJT71-NPBG6	|	 	|	2835094
+1	|	Hassallia byssoidea VB512170	|	 	|	1304833
+1	|	Scytonema hofmannii PCC 7110	|	 	|	128403
+1	|	Tolypothrix campylonemoides VB511288	|	 	|	1245935
+1	|	Mastigocladopsis repens	|	 	|	221287
+1	|	Brasilonema octagenarum UFV-OR1	|	 	|	417115
+1	|	Iningainema sp. BLCCT55	|	Iningainema tapete BLCC-T55	|	2748662
+1	|	Coleofasciculus sp. Co-bin14	|	 	|	2768886
+1	|	Phormidium ambiguum IAM M-71	|	 	|	454136
+1	|	Planktothrix sp. FACHB-1375	|	 	|	2692856
+1	|	Geminocystis herdmanii	|	 	|	669359
+1	|	Cyanobacterium aponinum PCC 10605	|	 	|	755178
+1	|	Chroococcus sp. FPU101	|	 	|	1974212
+1	|	Aphanothece hegewaldii CCALA 016	|	 	|	2107694
+1	|	Gloeothece verrucosa PCC 7822	|	 	|	497965
+1	|	Symploca sp. SIO2C1	|	 	|	2607783
+1	|	Thermosynechococcus vestitus BP-1	|	 	|	197221
+1	|	Synechococcus lividus PCC 6715	|	 	|	1917166
+1	|	Synechococcus sp. PCC 6312	|	 	|	195253
+1	|	Acaryochloris sp. RCC1774	|	 	|	1764569
+1	|	Aphanocapsa montana BDHKU210001	|	 	|	1574475
+1	|	Prochlorothrix hollandica PCC 9006   CALU 1027	|	Prochlorothrix hollandica PCC 9006 = CALU 1027	|	317619
+1	|	Leptolyngbya sp. NIES-2104	|	 	|	1552121
+1	|	Leptolyngbya boryana NIES-2135	|	 	|	1973484
+1	|	Myxacorys almedinensis A	|	 	|	2690445
+1	|	Desertifilum sp. IPPAS B-1220	|	 	|	1781255
+1	|	Neosynechococcus sphagnicola sy1	|	 	|	1497020
+3	|	Leptolyngbya sp. hensonii	|	 	|	 
+1	|	Gloeobacter kilaueensis JS1	|	 	|	1183438
+1	|	Gloeobacter violaceus PCC 7421	|	 	|	251221
+1	|	Gloeomargarita lithophora Alchichica-D10	|	 	|	1188229
+3	|	Gloeomargaritaceae cyanobacterium C42 A2020 066	|	 	|	
+1	|	Thermosynechococcus elongatus BP-1	|	Thermosynechococcus vestitus BP-1	|	197221
+1	|	Leptolyngbya sp. 'hensonii'	|		|	1922337
+1	|	Microcoleus sp. PCC 7113	|	Allocoleopsis franciscana PCC 7113	|	1173027

@@ -1,0 +1,11 @@
+IQ-TREE multicore version 1.6.12 for Mac OS X 64-bit built Aug 15 2019
+Developed by Bui Quang Minh, Nguyen Lam Tung, Olga Chernomor,
+Heiko Schmidt, Dominik Schrempf, Michael Woodhams.
+
+Host:    Davids-MacBook-Air-2.local (AVX2, FMA3, 8 GB RAM)
+Command: iqtree -s 4_HpnP_Full_Alignment.trimal.fasta -m MFP -bb 1000 -nt 4
+Seed:    936783 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Tue Nov  2 14:38:47 2021
+Kernel:  AVX+FMA - 4 threads (4 CPU cores detected)
+
+Reading alignment file 4_HpnP_Full_Alignment.trimal.fasta ... ERROR: File not found 4_HpnP_Full_Alignment.trimal.fasta
